@@ -9,12 +9,12 @@ import { Image } from 'astro:assets'
 ---
 
 <Layout title="Welcome to Astro.">
-	<section class="relative z-10">
+	<section class="relative z-10 max-w-[1920px]">
 		<div id="title" class="max-w-[1200px] mx-auto flex gap-[52px] pt-[145px]">
 			<h1 id="header" class="font-valorax text-[#A092E1] text-[80px] leading-[92px]">Station 4 :</h1>
 			<h1 class=" text-[80px] leading-[92px] header-shadow">Contacts</h1>
 		</div>
-		<div id="links" class="flex gap-[80px] mx-auto w-full absolute left-[400px] z-1 opacity-0">
+		<div id="links" class="flex gap-[80px] mx-auto w-full absolute left-[50px] xl:left-[400px] z-1 opacity-0">
 			<h1 id="linked" class="text-[60px] text-white header">LinkedId</h1>
 			<h1 id="github" class="text-[60px] text-white header">Github</h1>
 			<h1 id="email" class="text-[60px] text-white header">Email</h1>
@@ -25,21 +25,21 @@ import { Image } from 'astro:assets'
 			</p>
 		</div>
 		<div class="flex justify-center">
-			<Image id="car" src={Car} alt="car" class="max-w-[1029px] max-h-[634px]" />
+			<Image id="car" src={Car} alt="car" class="max-w-[1029px] w-full max-h-[634px]" />
 		</div>
 		<div id="secret" class="font-semibold text-center text-white mx-auto flex justify-center text-[28px] pt-[3rem] relative z-10">
 			<p class="max-w-[500px] absolute z-10">Here you will be able to find the ways of  connecting to the person you have been looking for.</p>
 		</div>
 	</section>
-	<div id="trigger" class="max-h-[1920px] w-full">
+	<div id="trigger" class="max-h-[1920px]">
 		<div class="w-full h-full flex justify-center relative max-h-[1920px]">
 			<Image id="light" src={Light} alt="light" class="max-w-[1303px] max-h-[1920px] z-0 absolute top-[-300px] opacity-0 origin-top" />
 		</div>
-		<div class="h-full relative max-w-[1920px]">
-			<Image id="crowd" src={Crowd} alt="light" class="max-w-[1920px] h-[800px] top-[200px] z-10 absolute opacity-0" />
+		<div class="h-full relative">
+			<Image id="crowd" src={Crowd} alt="light" class="h-[800px] top-[200px] z-10 absolute opacity-0" />
 		</div>
-		<div class="w-full h-full relative max-w-[1920px]">
-			<Image id="bg" src={Bg} alt="bg" class="max-w-[1920px] h-[1000px] z-[-1] opacity-0 absolute" />
+		<div class="h-full relative">
+			<Image id="bg" src={Bg} alt="bg" class="h-[1000px] z-[-1] opacity-0 absolute" />
 		</div>
 	</div>
 </Layout>
@@ -52,6 +52,16 @@ import { Image } from 'astro:assets'
 	import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 
 	gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
+
+/*
+	gsap.to('#title', {
+		yPercent: -10,
+		scrollTrigger:  {
+			trigger: '#title',
+			scrub: true,
+		},
+	});
+*/
 
 	gsap.to('#secret', {
 		y: 850,
@@ -104,8 +114,10 @@ import { Image } from 'astro:assets'
 			trigger: '#crowd',
 			start: 'top center',
 			scrub: true,
-			end:"+=200px",
+			end:"+=50",
+/*
 			snap: [0, 0.3, 0.8]
+*/
 		}
 	});
 
