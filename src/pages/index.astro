@@ -9,35 +9,38 @@ import { Image } from 'astro:assets'
 ---
 
 <Layout title="Welcome to Astro.">
-	<section class="overflow-x-hidden">
-		<div class="max-w-[1200px] mx-auto flex gap-[52px] pt-[145px]">
+	<section class="relative z-10">
+		<div id="title" class="max-w-[1200px] mx-auto flex gap-[52px] pt-[145px]">
 			<h1 id="header" class="font-valorax text-[#A092E1] text-[80px] leading-[92px]">Station 4 :</h1>
 			<h1 class=" text-[80px] leading-[92px] header-shadow">Contacts</h1>
 		</div>
-		<div class="font-semibold text-center text-white mt-[38px]">
-			<p class="mx-auto leading-[32px]">
+		<div id="links" class="flex gap-[80px] mx-auto w-full absolute left-[400px] z-1 opacity-0">
+			<h1 id="linked" class="text-[60px] text-white header">LinkedId</h1>
+			<h1 id="github" class="text-[60px] text-white header">Github</h1>
+			<h1 id="email" class="text-[60px] text-white header">Email</h1>
+		</div>
+		<div class="font-semibold text-center text-white mt-[30px]">
+			<p class="mx-auto leading-[32px] text-[28px] max-w-[506px]">
 				Doesn’t it look like a disguised entrance to a secret underground club?
 			</p>
 		</div>
 		<div class="flex justify-center">
 			<Image id="car" src={Car} alt="car" class="max-w-[1029px] max-h-[634px]" />
 		</div>
+		<div id="secret" class="font-semibold text-center text-white mx-auto flex justify-center text-[28px] pt-[3rem] relative z-10">
+			<p class="max-w-[500px] absolute z-10">Here you will be able to find the ways of  connecting to the person you have been looking for.</p>
+		</div>
 	</section>
-	<div id="trigger" class="max-h-[1920px]">
-		<div class="w-full h-full flex justify-center relative">
-			<Image id="light" src={Light} alt="light" class="max-w-[1303px] max-h-[1920px] z-0 absolute top-[-250px] opacity-0" />
+	<div id="trigger" class="max-h-[1920px] w-full">
+		<div class="w-full h-full flex justify-center relative max-h-[1920px]">
+			<Image id="light" src={Light} alt="light" class="max-w-[1303px] max-h-[1920px] z-0 absolute top-[-300px] opacity-0 origin-top" />
 		</div>
-		<div class="w-full h-full relative">
-			<Image id="crowd" src={Crowd} alt="light" class="max-w-[1920px] w-full h-[800px] top-[200px] z-10 absolute opacity-0 object-contain" />
+		<div class="h-full relative max-w-[1920px]">
+			<Image id="crowd" src={Crowd} alt="light" class="max-w-[1920px] h-[800px] top-[200px] z-10 absolute opacity-0" />
 		</div>
-		<div class="w-full h-full relative">
-			<Image id="bg" src={Bg} alt="bg" class="max-w-[1920px] h-[1000px] w-full z-[-1] opacity-0 absolute object-contain" />
+		<div class="w-full h-full relative max-w-[1920px]">
+			<Image id="bg" src={Bg} alt="bg" class="max-w-[1920px] h-[1000px] z-[-1] opacity-0 absolute" />
 		</div>
-	</div>
-	<div id="links" class="flex gap-[80px] max-w-[1500px] mx-auto w-full absolute left-[550px] z-1 bottom-[-200px] opacity-0">
-		<h1 id="linked" class="text-[60px] text-white header">LinkedId</h1>
-		<h1 id="github" class="text-[60px] text-white header">Github</h1>
-		<h1 id="email" class="text-[60px] text-white header">Email</h1>
 	</div>
 </Layout>
 
@@ -50,14 +53,27 @@ import { Image } from 'astro:assets'
 
 	gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
 
-	gsap.to('#links', {
-		y: 100,
-		opacity: 1,
-		duration: 2,
+	gsap.to('#secret', {
+		y: 850,
+		opacity: 0,
+		duration: 1,
 		scrollTrigger:  {
 			trigger: '#crowd',
 			scrub: true,
-			end:"+=20px"
+			start: "top center",
+			end: "+=300px"
+		},
+	});
+
+	gsap.to('#links', {
+		y: 1000,
+		opacity: 1,
+		duration: 1,
+		scrollTrigger:  {
+			trigger: '#crowd',
+			scrub: true,
+			end:"+=300px",
+			start: "top center",
 		},
 	});
 
@@ -81,13 +97,15 @@ import { Image } from 'astro:assets'
 	});
 
 	gsap.to('#light', {
-		scaleY: 5.2,
-		scaleX: 2,
+		scaleY: 1.6,
+		scaleX: 2.5,
 		duration: 1,
 		scrollTrigger: {
 			trigger: '#crowd',
 			start: 'top center',
-			scrub: true
+			scrub: true,
+			end:"+=200px",
+			snap: [0, 0.3, 0.8]
 		}
 	});
 
@@ -97,7 +115,8 @@ import { Image } from 'astro:assets'
 		scrollTrigger: {
 			trigger: '#crowd',
 			start: 'top bottom',
-			scrub: true
+			scrub: true,
+			end: "+=50px"
 		}
 	});
 
@@ -107,7 +126,7 @@ import { Image } from 'astro:assets'
 		scrollTrigger: {
 			trigger: '#crowd',
 			start: 'top bottom',
-			scrub: true
+			scrub: true,
 		}
 	});
 
