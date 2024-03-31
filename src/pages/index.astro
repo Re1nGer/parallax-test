@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Car from '../../public/car.png';
+import Light from '../../public/light_small.svg';
+import Crowd from '../../public/crowd.png';
+import Bg from '../../public/bg.png';
+import { Image } from 'astro:assets'
+
+---
+
+<Layout title="Welcome to Astro.">
+	<section class="overflow-x-hidden">
+		<div class="max-w-[1200px] mx-auto flex gap-[52px] pt-[145px]">
+			<h1 id="header" class="font-valorax text-[#A092E1] text-[80px] leading-[92px]">Station 4 :</h1>
+			<h1 class=" text-[80px] leading-[92px] header-shadow">Contacts</h1>
+		</div>
+		<div class="font-semibold text-center text-white mt-[38px]">
+			<p class="mx-auto leading-[32px]">
+				Doesn’t it look like a disguised entrance to a secret underground club?
+			</p>
+		</div>
+		<div class="flex justify-center">
+			<Image id="car" src={Car} alt="car" class="max-w-[1029px] max-h-[634px]" />
+		</div>
+	</section>
+	<div id="trigger" class="max-h-[1920px]">
+		<div class="w-full h-full flex justify-center relative">
+			<Image id="light" src={Light} alt="light" class="max-w-[1303px] max-h-[1920px] z-0 absolute top-[-250px] opacity-0" />
+		</div>
+		<div class="w-full h-full relative">
+			<Image id="crowd" src={Crowd} alt="light" class="max-w-[1920px] w-full h-[800px] top-[200px] z-10 absolute opacity-0 object-contain" />
+		</div>
+		<div class="w-full h-full relative">
+			<Image id="bg" src={Bg} alt="bg" class="max-w-[1920px] h-[1000px] w-full z-[-1] opacity-0 absolute object-contain" />
+		</div>
+	</div>
+	<div id="links" class="flex gap-[80px] max-w-[1500px] mx-auto w-full absolute left-[550px] z-1 bottom-[-200px] opacity-0">
+		<h1 id="linked" class="text-[60px] text-white header">LinkedId</h1>
+		<h1 id="github" class="text-[60px] text-white header">Github</h1>
+		<h1 id="email" class="text-[60px] text-white header">Email</h1>
+	</div>
+</Layout>
+
+<script>
+	import { gsap } from "gsap/dist/gsap";
+
+	import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+	import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+	import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
+
+	gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
+
+	gsap.to('#links', {
+		y: 100,
+		opacity: 1,
+		duration: 2,
+		scrollTrigger:  {
+			trigger: '#crowd',
+			scrub: true,
+			end:"+=20px"
+		},
+	});
+
+	gsap.to('#car', {
+		scale: 0.8,
+		scrollTrigger:  {
+			once: false,
+			scrub: true
+		},
+	});
+
+	gsap.to('#light', {
+		opacity: 1,
+		duration: 1,
+		scrollTrigger: {
+			trigger: '#light',
+			start: 'top center',
+			scrub: true,
+			end:"+=50px"
+		}
+	});
+
+	gsap.to('#light', {
+		scaleY: 5.2,
+		scaleX: 2,
+		duration: 1,
+		scrollTrigger: {
+			trigger: '#crowd',
+			start: 'top center',
+			scrub: true
+		}
+	});
+
+	gsap.to('#crowd', {
+		opacity: 1,
+		duration: .5,
+		scrollTrigger: {
+			trigger: '#crowd',
+			start: 'top bottom',
+			scrub: true
+		}
+	});
+
+	gsap.to('#bg', {
+		opacity: .3,
+		duration: .5,
+		scrollTrigger: {
+			trigger: '#crowd',
+			start: 'top bottom',
+			scrub: true
+		}
+	});
+
+</script>
+
+<style>
+	h1 {
+		font-family: 'valorax', sans-serif;
+	}
+	.header  {
+		text-shadow: -1px 1px 0 #fff,
+		1px 1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px -1px 0 #fff;
+	}
+	.header-shadow {
+		text-shadow: -1px 1px 0 #fff,
+		1px 1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px -1px 0 #fff;
+	}
+</style>
