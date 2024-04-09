@@ -4,11 +4,22 @@ import Car from '../../public/car.png';
 import Light from '../../public/light_small.svg';
 import Crowd from '../../public/crowd.png';
 import Bg from '../../public/bg.png';
+import LandingBg from '../../public/landing_bg.jpg';
 import { Image } from 'astro:assets'
 
 ---
 
 <Layout title="Welcome to Astro.">
+	<section id="landing" class="pb-[163px] relative h-[1000px]">
+		<Image src={LandingBg} alt="landing" class="absolute opacity-50 h-full w-full" />
+		<div class="pt-[145px]">
+			<h1 class="font-bold text-[45px] text-center text-white relative z-10">hi, my name is bekjon and i’m a</h1>
+			<h2 class="text-[#A092E1] text-[105px] text-center font-valorax relative z-10">Software Engineer</h2>
+		</div>
+	</section>
+	<section id="aboutme"></section>
+	<section id="work"></section>
+	<section id="sideprojects"></section>
 	<section class="relative z-10 max-w-[1920px]">
 		<div id="title" class="max-w-[1200px] mx-auto flex gap-[52px] pt-[145px]">
 			<h1 id="header" class="font-valorax text-[#A092E1] text-[80px] leading-[92px]">Station 4 :</h1>
@@ -115,9 +126,6 @@ import { Image } from 'astro:assets'
 			start: 'top center',
 			scrub: true,
 			end:"+=50",
-/*
-			snap: [0, 0.3, 0.8]
-*/
 		}
 	});
 
