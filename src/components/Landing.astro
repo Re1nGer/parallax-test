@@ -3,61 +3,50 @@ import LandingBg from "../../public/landing_bg.jpg";
 import { Image } from 'astro:assets'
 import MenuIcon from "../../public/menu-2-svgrepo-com 1.svg";
 import Moon from '../../public/moon_landing.png';
-import Location from '../../public/location.svg';
+import Navigation from "./Navigation.astro";
 
 interface Props { }
 
 ---
 <section id="landing" class="pb-[163px] relative h-[1000px]">
     <Image src={LandingBg} alt="landing" class="absolute opacity-50 z-[-10] h-full w-full" />
-    <div class="md:hidden flex justify-center pt-[51px]">
+    <div id="mobile_menu" class="md:hidden flex justify-center pt-[51px]">
         <Image src={MenuIcon} alt="menu" class="max-h-[47px] relative z-10 max-w-[47px] h-full w-full text-[#CFC5FF]" />
     </div>
     <div id="header" class="md:pt-[75px] pt-[30px] px-[42px] pb-[60px]">
-        <h1 class="font-bold text-[16px] md:text-[45px] text-center header-shadow text-white relative z-10 upppercase font-valorax">hi, my name is bekjon and i’m a</h1>
+        <h1 class="font-bold text-[16px] md:text-[45px] text-center header-shadow text-white relative z-10 upppercase font-valorax mb-[10px] lg:mb-0">hi, my name is bekjon and i’m a</h1>
         <h2 class="text-[#A092E1] text-[32px] md:text-[105px] text-shadow text-center font-valorax relative z-10">Software Engineer</h2>
     </div>
-    <div class="flex xl:px-[180px] lg:px-[80px] px-0 justify-start gap-[60px]">
+    <div class="flex xl:px-[180px] lg:px-[80px] px-0 justify-start flex-col-reverse items-center lg:items-start lg:flex-row gap-[60px]">
         <div id="landing_text" class="flex flex-col flex-1 relative z-10 max-w-[420px]">
-            <p class="text-white text-left mb-[50px] text-[28px]">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
-            <button class="border-dark_purple mb-[25px] border-[2px] max-w-[230px] cv-btn font-valorax text-dark_purple py-[20px]">Cv</button>
-            <button class="border-dark_purple mb-[25px] border-[2px] max-w-[280px] cv-btn font-valorax bg-dark_purple text-black py-[20px]">Experience</button>
+            <p class="text-white lg:text-left mb-[50px] text-[28px] text-center">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
+            <button class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[230px] cv-btn font-valorax text-dark_purple py-[20px]">Cv</button>
+            <button class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[280px] cv-btn font-valorax bg-dark_purple text-black py-[20px]">Experience</button>
         </div>
-        <div class="flex justify-start relative flex-1 max-w-[900px]">
-            <Image id="moon" src={Moon} alt="moon" class="max-w-[640px] max-h-[640px] z-10 mr-[-8rem]" />
-<!--
-            <Image src={Arc} alt="arc" class="max-w-[251px] max-h-[640px]" />
--->
-            <div id="l1" class="absolute flex justify-center items-center opacity-0">
-                <Image src={Location} alt="location" />
-                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[298px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
-                    1
-                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] mx-[40px] whitespace-nowrap">About Me</p>
-                </div>
-            </div>
-            <div id="l2" class="absolute flex justify-center items-center opacity-0">
-                <Image src={Location} alt="location" />
-                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[375px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
-                    2
-                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] ml-[20px] whitespace-nowrap">Work Experience</p>
-                </div>
-            </div>
-            <div id="l3" class="absolute flex justify-center items-center opacity-0">
-                <Image src={Location} alt="location" />
-                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[325px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
-                    3
-                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] ml-[20px] whitespace-nowrap">Side Projects</p>
-                </div>
-            </div>
-            <div id="l4" class="absolute flex justify-center items-center opacity-0">
-                <Image src={Location} alt="location" />
-                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[260px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
-                    4
-                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] mx-[25px] whitespace-nowrap">Contacts</p>
-                </div>
-            </div>
+        <div class="flex justify-center lg:justify-start relative flex-1 max-w-[900px]">
+            <Image id="moon" src={Moon} alt="moon" class="max-w-[260px] max-h-[260px] lg:max-w-[640px] lg:max-h-[640px] z-10 lg:mr-[-8rem]" />
+            <Navigation
+                id="l1"
+                title="About Me"
+                number={1}
+            />
+            <Navigation
+                id="l2"
+                title="Work Experience"
+                number={2}
+            />
+            <Navigation
+                id="l3"
+                title="Side Projects"
+                number={3}
+            />
+            <Navigation
+                id="l4"
+                title="Contacts"
+                number={4}
+            />
 
-            <svg width="272" height="639" viewBox="0 0 272 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="hidden sm:block" width="272" height="639" viewBox="0 0 272 660" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_94_301)">
                     <path id="arc" fill-rule="evenodd" clip-rule="evenodd" d="M10 649.987C153.919 616.178 261.143 485.923 261.143 330.396C261.143 174.869 153.919 44.6137 10 10.8043V14.9163C151.67 48.6454 257.143 177.067 257.143 330.396C257.143 483.724 151.67 612.146 10 645.875V649.987Z" fill="#CFC5FF"/>
                 </g>
@@ -95,6 +84,10 @@ interface Props { }
         duration: 1,
         ease: "power1.inOut",
     })
+    .fromTo("#mobile_menu", { opacity: 0 }, {
+        opacity: 1,
+        duration: 1,
+    }, "<")
     .fromTo("#moon", { scale: 0.5, opacity: 0 }, {
         delay: 0,
         scale: 1,
