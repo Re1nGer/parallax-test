@@ -1,0 +1,177 @@
+---
+import LandingBg from "../../public/landing_bg.jpg";
+import { Image } from 'astro:assets'
+import MenuIcon from "../../public/menu-2-svgrepo-com 1.svg";
+import Moon from '../../public/moon_landing.png';
+import Location from '../../public/location.svg';
+
+interface Props { }
+
+---
+<section id="landing" class="pb-[163px] relative h-[1000px]">
+    <Image src={LandingBg} alt="landing" class="absolute opacity-50 z-[-10] h-full w-full" />
+    <div class="md:hidden flex justify-center pt-[51px]">
+        <Image src={MenuIcon} alt="menu" class="max-h-[47px] relative z-10 max-w-[47px] h-full w-full text-[#CFC5FF]" />
+    </div>
+    <div id="header" class="md:pt-[75px] pt-[30px] px-[42px] pb-[60px]">
+        <h1 class="font-bold text-[16px] md:text-[45px] text-center header-shadow text-white relative z-10 upppercase font-valorax">hi, my name is bekjon and i’m a</h1>
+        <h2 class="text-[#A092E1] text-[32px] md:text-[105px] text-shadow text-center font-valorax relative z-10">Software Engineer</h2>
+    </div>
+    <div class="flex xl:px-[180px] lg:px-[80px] px-0 justify-start gap-[60px]">
+        <div id="landing_text" class="flex flex-col flex-1 relative z-10 max-w-[420px]">
+            <p class="text-white text-left mb-[50px] text-[28px]">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
+            <button class="border-dark_purple mb-[25px] border-[2px] max-w-[230px] cv-btn font-valorax text-dark_purple py-[20px]">Cv</button>
+            <button class="border-dark_purple mb-[25px] border-[2px] max-w-[280px] cv-btn font-valorax bg-dark_purple text-black py-[20px]">Experience</button>
+        </div>
+        <div class="flex justify-start relative flex-1 max-w-[900px]">
+            <Image id="moon" src={Moon} alt="moon" class="max-w-[640px] max-h-[640px] z-10 mr-[-8rem]" />
+<!--
+            <Image src={Arc} alt="arc" class="max-w-[251px] max-h-[640px]" />
+-->
+            <div id="l1" class="absolute flex justify-center items-center opacity-0">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[298px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    1
+                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] mx-[40px] whitespace-nowrap">About Me</p>
+                </div>
+            </div>
+            <div id="l2" class="absolute flex justify-center items-center opacity-0">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[375px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    2
+                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] ml-[20px] whitespace-nowrap">Work Experience</p>
+                </div>
+            </div>
+            <div id="l3" class="absolute flex justify-center items-center opacity-0">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[325px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    3
+                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] ml-[20px] whitespace-nowrap">Side Projects</p>
+                </div>
+            </div>
+            <div id="l4" class="absolute flex justify-center items-center opacity-0">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-[260px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    4
+                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] mx-[25px] whitespace-nowrap">Contacts</p>
+                </div>
+            </div>
+
+            <svg width="272" height="639" viewBox="0 0 272 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_94_301)">
+                    <path id="arc" fill-rule="evenodd" clip-rule="evenodd" d="M10 649.987C153.919 616.178 261.143 485.923 261.143 330.396C261.143 174.869 153.919 44.6137 10 10.8043V14.9163C151.67 48.6454 257.143 177.067 257.143 330.396C257.143 483.724 151.67 612.146 10 645.875V649.987Z" fill="#CFC5FF"/>
+                </g>
+                <defs>
+                    <filter id="filter0_d_94_301" x="0" y="0.804321" width="271.143" height="659.183" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.81373 0 0 0 0 0.773611 0 0 0 0 1 0 0 0 1 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_94_301"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_94_301" result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { gsap } from "gsap/dist/gsap";
+
+    import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+    import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+    import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
+
+    gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
+
+
+    const timeline = gsap.timeline();
+
+    timeline.fromTo("#header", { y: -200 }, {
+        y: 0,
+        duration: 1,
+        ease: "power1.inOut",
+    })
+    .fromTo("#moon", { scale: 0.5, opacity: 0 }, {
+        delay: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+    }, "<")
+    .fromTo("#arc", { opacity: 0 }, {
+        opacity: 1,
+        duration: 1,
+    }, "<")
+    .fromTo("#landing_text", { opacity: 0 }, {
+        opacity: 1,
+        duration: 1,
+    }, "<")
+    .to("#l1", {
+        motionPath: {
+            path: "#arc",
+            align: "#arc",
+            alignOrigin: [0, 1],
+            start: 0,
+            end: 0.4,
+            offsetX: 25
+        },
+        transformOrigin: "50% 50%",
+        duration: 1,
+        opacity: 1,
+    }, ">")
+    .to("#l2", {
+        motionPath: {
+            path: "#arc",
+            align: "#arc",
+            alignOrigin: [0, 1],
+            start: 0,
+            end: 0.3,
+            offsetX: 25
+        },
+        opacity: 1,
+        transformOrigin: "50% 50%",
+        duration: 1,
+    }, "<")
+    .to("#l3", {
+        motionPath: {
+            path: "#arc",
+            align: "#arc",
+            alignOrigin: [0, 1],
+            start: 0,
+            end: 0.2,
+            offsetX: 40
+        },
+        opacity: 1,
+        duration: 1,
+    },"<")
+    .to("#l4", {
+        motionPath: {
+            path: "#arc",
+            align: "#arc",
+            alignOrigin: [-.5, 1],
+            start: 0,
+            end: 0.1,
+            offsetX: 40
+        },
+        opacity: 1,
+        duration: 1,
+    }, "<")
+
+
+
+</script>
+
+<style>
+    .text-shadow {
+        text-shadow: 0 0 10px #D0C5FF;
+    }
+    .header-shadow {
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .cv-btn {
+        box-shadow: 0 0 10px #D0C5FF;
+    }
+</style>
