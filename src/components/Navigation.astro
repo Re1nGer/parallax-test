@@ -6,17 +6,23 @@ import { Image } from 'astro:assets'
 interface Props {
    id: string,
    title: string,
-   number: number
+   number: number,
+   width: number
 }
 
-const { id, title, number } = Astro.props;
+const { id, title, number, width } = Astro.props;
 
 ---
 
 <div id={id} class="absolute lg:flex justify-center items-center opacity-0 hidden">
     <Image src={Location} alt="location" />
-    <div class="cursor-pointer h-[50px] hover:pl-[1rem] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:w-fit transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+    <div style=`width: ${width}px` class="cursor-pointer h-[50px] hover:pl-[1rem] group w-[50px] max-w-[150px] hover:max-w-fit bg-left ml-4 mt-4 top-0 left-0 hover:w-fit transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
         {number}
-        <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] px-[20px] whitespace-nowrap">{title}</p>
+        <p class="hidden group-hover:block  text-dark_purple font-valorax text-[25px] px-[20px] whitespace-nowrap">{title}</p>
     </div>
 </div>
+
+
+<script>
+
+</script>

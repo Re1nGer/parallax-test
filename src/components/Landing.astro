@@ -3,13 +3,13 @@ import LandingBg from "../../public/landing_bg.jpg";
 import { Image } from 'astro:assets'
 import MenuIcon from "../../public/menu-2-svgrepo-com 1.svg";
 import Moon from '../../public/moon_landing.png';
-import Navigation from "./Navigation.astro";
+import Location from '../../public/location.svg';
 
 interface Props { }
 
 ---
-<section id="landing" class="pb-[163px] relative h-[1000px]">
-    <Image src={LandingBg} alt="landing" class="absolute opacity-50 z-[-10] h-full w-full" />
+<section id="landing" class="pb-[163px] relative max-h-[1200px]">
+    <Image src={LandingBg} alt="landing" class="absolute opacity-50 z-[-10] max-h-[1200px] h-full w-full" />
     <div id="mobile_menu" class="md:hidden flex justify-center pt-[51px]">
         <Image src={MenuIcon} alt="menu" class="max-h-[47px] relative z-10 max-w-[47px] h-full w-full text-[#CFC5FF]" />
     </div>
@@ -24,29 +24,39 @@ interface Props { }
             <button class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[280px] cv-btn font-valorax bg-dark_purple text-black py-[20px]">Experience</button>
         </div>
         <div class="flex justify-center lg:justify-start relative flex-1 max-w-[900px]">
-            <Image id="moon" src={Moon} alt="moon" class="max-w-[260px] max-h-[260px] lg:max-w-[640px] lg:max-h-[640px] z-10 lg:mr-[-8rem]" />
-            <Navigation
-                id="l1"
-                title="About Me"
-                number={1}
-            />
-            <Navigation
-                id="l2"
-                title="Work Experience"
-                number={2}
-            />
-            <Navigation
-                id="l3"
-                title="Side Projects"
-                number={3}
-            />
-            <Navigation
-                id="l4"
-                title="Contacts"
-                number={4}
-            />
 
-            <svg class="hidden sm:block" width="272" height="639" viewBox="0 0 272 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Image id="moon" src={Moon} alt="moon" class="max-w-[260px] max-h-[260px] md:max-w-[460px] md:max-h-[460px] m lg:max-w-[640px] lg:max-h-[640px] z-10 lg:mr-[-8rem]" />
+
+            <div id="l1" class="absolute md:flex justify-center items-center opacity-0 hidden">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:h-[250px] 2xl:hover:h-auto hover:[writing-mode:vertical-lr] 2xl:hover:[writing-mode:horizontal-tb] 2xl:hover:w-[250px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    1
+                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] 2xl:ml-[20px] 2xl:mt-0 mt-[.5rem]">About Me</p>
+                </div>
+            </div>
+            <div id="l2" class="absolute md:flex hover:z-10 justify-center items-center opacity-0 hidden">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:h-[375px] 2xl:hover:h-auto hover:[writing-mode:vertical-lr] 2xl:hover:[writing-mode:horizontal-tb] 2xl:hover:w-[375px] transition-all rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    <p>2</p>
+                    <p class="hidden group-hover:inline-block text-dark_purple font-valorax text-[25px] 2xl:ml-[20px] 2xl:mt-0 mt-[.5rem]">Work Experience</p>
+                </div>
+            </div>
+            <div id="l3" class="absolute hidden md:flex justify-center items-center opacity-0">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:h-[300px] 2xl:hover:h-auto hover:[writing-mode:vertical-lr] 2xl:hover:[writing-mode:horizontal-tb] 2xl:hover:w-[300px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    3
+                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] 2xl:ml-[20px] 2xl:mt-0 mt-[.5rem]">Side Projects</p>
+                </div>
+            </div>
+            <div id="l4" class="absolute hidden md:flex justify-center items-center opacity-0">
+                <Image src={Location} alt="location" />
+                <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:h-[250px] 2xl:hover:h-auto hover:[writing-mode:vertical-lr] 2xl:hover:[writing-mode:horizontal-tb] 2xl:hover:w-[250px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
+                    4
+                    <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] mx-[25px] 2xl:ml-[20px] 2xl:mt-0 mt-[.5rem]">Contacts</p>
+                </div>
+            </div>
+
+            <svg class="hidden sm:block md:h-[460px] lg:h-[639px]" width="272" height="639" viewBox="0 0 272 660" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_94_301)">
                     <path id="arc" fill-rule="evenodd" clip-rule="evenodd" d="M10 649.987C153.919 616.178 261.143 485.923 261.143 330.396C261.143 174.869 153.919 44.6137 10 10.8043V14.9163C151.67 48.6454 257.143 177.067 257.143 330.396C257.143 483.724 151.67 612.146 10 645.875V649.987Z" fill="#CFC5FF"/>
                 </g>
