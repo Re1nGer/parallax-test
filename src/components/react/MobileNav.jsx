@@ -14,9 +14,11 @@ const MobileNav = () => {
         setIsOpen(!isOpen);
     }
 
+/*
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "unset";
     }, [isOpen]);
+*/
 
     return <>
         <div id="mobile_menu" className="md:hidden flex justify-center pt-[51px]">
@@ -34,7 +36,7 @@ const MobileNav = () => {
         </div>
         <AnimatePresence>
             { isOpen ? (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} id='mobile_nav' className="h-full w-full bg-dark_purple absolute top-0 z-20 md:hidden">
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} id='mobile_nav' className="h-screen w-full bg-dark_purple absolute top-0 z-20 md:hidden">
                     <div className="pt-[43px] mb-[41px] flex justify-center">
 {/*
                         <img id="mobile_close_btn" onClick={handleToggle} src={CloseMenu.src} alt="menu close" className="w-[54px] h-[54px]"/>
