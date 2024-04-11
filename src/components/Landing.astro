@@ -1,18 +1,16 @@
 ---
 import LandingBg from "../../public/landing_bg.jpg";
 import { Image } from 'astro:assets'
-import MenuIcon from "../../public/menu-2-svgrepo-com 1.svg";
 import Moon from '../../public/moon_landing.png';
 import Location from '../../public/location.svg';
+import MobileNav from "./MobileNav";
 
 interface Props { }
-
 ---
+
 <section id="landing" class="pb-[163px] relative max-h-[1200px]">
     <Image src={LandingBg} alt="landing" class="absolute opacity-50 z-[-10] max-h-[1200px] h-full w-full hidden lg:block" />
-    <div id="mobile_menu" class="md:hidden flex justify-center pt-[51px]">
-        <Image src={MenuIcon} alt="menu" class="max-h-[47px] relative z-10 max-w-[47px] h-full w-full text-[#CFC5FF]" />
-    </div>
+    <MobileNav client:load />
     <div id="header" class="md:pt-[40px] pt-[30px] px-[42px] pb-[60px]">
         <h1 class="font-bold text-[16px] md:text-[45px] text-center header-shadow text-white relative z-10 uppercase mb-[10px] lg:mb-0">hi, my name is bekjon and i’m a</h1>
         <h2 class="text-[#A092E1] text-[32px] md:text-[105px] text-shadow text-center font-valorax relative z-10">Software Engineer</h2>
@@ -84,7 +82,6 @@ interface Props { }
     import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 
     gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
-
 
     const timeline = gsap.timeline();
 
