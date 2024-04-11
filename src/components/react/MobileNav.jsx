@@ -25,7 +25,7 @@ const MobileNav = () => {
                  className="max-h-[47px] relative z-10 max-w-[47px] h-full w-full text-[#CFC5FF]"/>
 */}
 
-            <svg onClick={handleToggle} width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg onClick={handleToggle} className={'active:drop-shadow-[0_0_10px_#D0C5FF]'} width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.66 6.24158H31.02C28.9434 6.24158 27.26 7.92499 27.26 10.0016V15.6416C27.26 17.7182 28.9434 19.4016 31.02 19.4016H36.66C38.7367 19.4016 40.42 17.7182 40.42 15.6416V10.0016C40.42 7.92499 38.7367 6.24158 36.66 6.24158Z" stroke="#CFC5FF" strokeWidth="2.82" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M15.9801 6.24158H10.3401C8.26349 6.24158 6.58008 7.92499 6.58008 10.0016V15.6416C6.58008 17.7182 8.26349 19.4016 10.3401 19.4016H15.9801C18.0567 19.4016 19.7401 17.7182 19.7401 15.6416V10.0016C19.7401 7.92499 18.0567 6.24158 15.9801 6.24158Z" stroke="#CFC5FF" strokeWidth="2.82" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M36.66 26.9216H31.02C28.9434 26.9216 27.26 28.605 27.26 30.6816V36.3216C27.26 38.3983 28.9434 40.0816 31.02 40.0816H36.66C38.7367 40.0816 40.42 38.3983 40.42 36.3216V30.6816C40.42 28.605 38.7367 26.9216 36.66 26.9216Z" stroke="#CFC5FF" strokeWidth="2.82" strokeLinecap="round" strokeLinejoin="round"/>
