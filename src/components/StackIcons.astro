@@ -9,6 +9,15 @@ import NodeJsBlur2 from "../assets/nodejs_blur2.svg";
 import GolangIcon from "../assets/golang.svg";
 import BlueBlur from "../assets/blue_blur.svg";
 import Docker from "../assets/docker.svg";
+import Postgres from '../assets/postgresql.svg';
+import Redux from '../assets/redux.svg';
+import ReduxBlur from '../assets/redux_blur.svg';
+import DarkBlur from '../assets/dark_blur.svg';
+import DarkPurple from '../assets/dark_purple.svg';
+import DarkGreen from '../assets/dark_green.svg';
+import JavaScript from '../assets/javascript.svg';
+import JavascriptBlur from '../assets/javascript_blur.svg';
+import Typescript from '../assets/typescript.svg';
 import {Image} from "astro:assets";
 ---
 <div class="flex flex-col items-center mt-[42px] relative h-full w-full">
@@ -16,29 +25,39 @@ import {Image} from "astro:assets";
     <div class="flex justify-center max-w-[140px] mt-[42px] gap-[13px] flex-wrap">
         <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-20">
             <Image src={ReactIcon} class="max-w-[30px] scale-125 max-h-[34px] w-full h-full relative z-20 text-dark_blue" alt="react" />
-            <Image src={BlurReact} class="max-w-[40px] max-h-[40px] h-full w-full top-5 absolute z-10" alt="react blur" />
+            <Image src={DarkBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-125 opacity-50 absolute z-0" alt="react blur" />
         </div>
         <div class="flex max-w-[56px] max-h-[54px] h-[54px] items-center w-full rounded-md justify-center gr_icon relative z-10">
             <Image src={CSharp} class="max-w-[30px] max-h-[34px] relative z-20" alt="react" />
-            <Image src={CSharpBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-5 absolute z-10" alt="csharp blur" />
+            <Image src={DarkPurple} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-125 opacity-50 absolute z-0" alt="react blur" />
         </div>
         <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
             <Image src={NodeJsIcon} class="max-w-[30px] max-h-[34px] w-full h-full relative z-20" alt="react" />
-            <Image src={NodeJsBlur2} class="max-w-[40px] max-h-[40px] h-full w-full top-5 absolute z-0 opacity-70" alt="nodejs blur" />
+            <Image src={DarkGreen} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-125 opacity-50 absolute z-0" alt="react blur" />
         </div>
         <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
             <Image src={GolangIcon} class="max-w-[30px] max-h-[34px] w-full scale-125 h-full relative z-20" alt="react" />
-            <Image src={BlueBlur} class="max-w-[40px] max-h-[40px] opacity-40 rounded-full backdrop-blur-md top-3 absolute z-0" alt="react blur" />
+            <Image src={DarkBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-1 scale-150 opacity-50 absolute z-0" alt="react blur" />
         </div>
         <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
             <Image src={Docker} class="max-w-[30px] max-h-[34px] w-full h-full scale-125 relative z-20" alt="react" />
-            <Image src={BlurReact} class="max-w-[40px] max-h-[40px] h-full w-full top-6 scale-125 absolute z-0" alt="react blur" />
+            <Image src={DarkBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-125 opacity-50 absolute z-0" alt="react blur" />
         </div>
-        <div class="flex max-w-[56px] max-h-[54px] rounded-md bg-transparent gr_icon relative z-10">
-            <Image src={ReactIcon} class="max-w-[33px] max-h-[30px] relative z-20" alt="react" />
+        <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
+            <Image src={Postgres} class="max-w-[30px] max-h-[34px] relative z-20" alt="react" />
+            <Image src={DarkBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-125 opacity-50 absolute z-0" alt="react blur" />
         </div>
-        <div class="flex max-w-[56px] max-h-[54px] rounded-md bg-transparent gr_icon relative z-10">
-            <Image src={ReactIcon} class="max-w-[33px] max-h-[30px] relative z-20" alt="react" />
+        <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
+            <Image src={Redux} class="max-w-[30px] max-h-[34px] relative z-20" alt="react" />
+            <Image src={ReduxBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-125 opacity-40 absolute z-0" alt="react blur" />
+        </div>
+        <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
+            <Image src={JavaScript} class="max-w-[30px] max-h-[34px] relative z-20" alt="react" />
+            <Image src={JavascriptBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-x-150 scale-y-125 opacity-70 absolute z-0" alt="react blur" />
+        </div>
+        <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
+            <Image src={Typescript} class="max-w-[30px] max-h-[34px] relative z-20" alt="react" />
+            <Image src={DarkBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-2 scale-125 opacity-50 absolute z-0" alt="react blur" />
         </div>
     </div>
 </div>
