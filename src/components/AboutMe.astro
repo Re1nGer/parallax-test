@@ -5,7 +5,9 @@ import AboutMeBorder from '../../public/v2.svg';
 import AboutMeImg from '../../public/about_me_img.png';
 import StackBorder from '../../public/stack_border.svg';
 import ReactIcon from '../../public/react.svg';
-import Blur from '../../public/blur.svg';
+import BlurReact from '../assets/react_blur.svg';
+import CSharp from '../assets/csharp.svg';
+import CSharpBlur from '../assets/csharp_blur.svg';
 ---
 
 <section id="aboutme">
@@ -25,12 +27,13 @@ import Blur from '../../public/blur.svg';
             <div class="flex flex-col items-center mt-[42px] relative h-full w-full">
                 <Image src={StackBorder} alt="stack border" class="w-full absolute z-10 max-w-[204px]" />
                 <div class="flex justify-center max-w-[140px] mt-[42px] gap-[13px] flex-wrap">
-                    <div class="max-w-[56px] max-h-[54px] flex rounded-md bg-transparent gr_icon relative z-10">
-                        <Image src={ReactIcon} class="max-w-[33px] max-h-[30px] relative z-20" alt="react" />
+                    <div class="max-w-[56px] max-h-[54px] h-[54px] justify-center items-center w-full flex rounded-md gr_icon relative z-10">
+                        <Image src={ReactIcon} class="max-w-[30px] max-h-[34px] w-full h-full relative z-20 text-dark_blue" alt="react" />
+                        <Image src={BlurReact} class="max-w-[40px] max-h-[40px] h-full w-full top-5 absolute z-10" alt="react" />
                     </div>
-                    <div class="flex max-w-[56px] max-h-[54px] rounded-md bg-transparent gr_icon relative z-10">
-                        <Image src={ReactIcon} class="max-w-[33px] max-h-[30px] relative z-20" alt="react" />
-                        <Image src={Blur} class="max-w-[33px] max-h-[30px] top-3 absolute z-20" alt="react" />
+                    <div class="flex max-w-[56px] max-h-[54px] h-[54px] items-center w-full rounded-md justify-center gr_icon relative z-10">
+                        <Image src={CSharp} class="max-w-[30px] max-h-[34px] relative z-20" alt="react" />
+                        <Image src={CSharpBlur} class="max-w-[40px] max-h-[40px] h-full w-full top-5 absolute z-10" alt="react" />
                     </div>
                     <div class="flex max-w-[56px] max-h-[54px] rounded-md bg-transparent gr_icon relative z-10">
                         <Image src={ReactIcon} class="max-w-[33px] max-h-[30px] relative z-20" alt="react" />
@@ -57,5 +60,6 @@ import Blur from '../../public/blur.svg';
     .gr_icon {
         padding: .25rem;
         border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.20);
     }
 </style>
