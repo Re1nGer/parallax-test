@@ -18,12 +18,12 @@ const MobileNav = () => {
         document.body.style.overflow = isOpen ? "hidden" : "unset";
     }, [isOpen]);
 
+    const handleNavigateToAboutMe = () => {
+        document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest' });
+    }
+
     return <>
         <div id="mobile_menu" className="md:hidden flex justify-center pt-[51px]">
-{/*
-            <img id="mobile_nav_btn" src={MenuIcon.src} onClick={handleToggle} alt="menu"
-                 className="max-h-[47px] relative z-10 max-w-[47px] h-full w-full text-[#CFC5FF]"/>
-*/}
 
             <svg onClick={handleToggle} className={'active:drop-shadow-[0_0_10px_#D0C5FF]'} width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.66 6.24158H31.02C28.9434 6.24158 27.26 7.92499 27.26 10.0016V15.6416C27.26 17.7182 28.9434 19.4016 31.02 19.4016H36.66C38.7367 19.4016 40.42 17.7182 40.42 15.6416V10.0016C40.42 7.92499 38.7367 6.24158 36.66 6.24158Z" stroke="#CFC5FF" strokeWidth="2.82" strokeLinecap="round" strokeLinejoin="round"/>
@@ -48,7 +48,7 @@ const MobileNav = () => {
                     <div className="flex flex-col gap-[25px] items-center">
                         <div className="flex-col flex gap-[6px] items-center">
                             <img src={Nav1.src} alt="nav"/>
-                            <h1 className="font-valorax text-[25px] text-white">About Me</h1>
+                            <h1 className="font-valorax text-[25px] text-white" onClick={handleNavigateToAboutMe}>About Me</h1>
                         </div>
                         <div className="flex-col flex gap-[6px] items-center">
                             <img src={Nav2.src} alt="nav"/>
