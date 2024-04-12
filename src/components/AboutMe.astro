@@ -7,6 +7,11 @@ import YearsExpBorder from '../assets/exp_border.svg';
 import StackIcons from "./StackIcons.astro";
 import AboutMeImg2 from '../assets/about_me_img2.png';
 import Achievement from '../assets/achievment_border.svg';
+import Aws from '../assets/aws.png';
+import Leetcode from '../assets/leetcode_100.png';
+import PullShark from '../assets/pull_shark.png';
+import PairCoding from '../assets/code_pair.png';
+import DarkBlur from "../assets/dark_blur.svg";
 
 ---
 <section id="aboutme" class="md:hidden">
@@ -16,7 +21,7 @@ import Achievement from '../assets/achievment_border.svg';
     </div>
     <p class="text-[16px] text-white px-[40px]">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
 </section>
-<section class="relative mt-[3rem] h-[1476px] md:hidden">
+<section class="relative mt-[3rem] h-[600px] md:hidden">
     <Image src={Bg} alt="background" class="max-h-[664px] absolute object-cover drop-shadow-lg" />
     <div class="w-full sh h-[1px]"></div>
     <div class="w-full mt-[25px] max-h-[1476px] flex flex-col items-center">
@@ -31,13 +36,46 @@ import Achievement from '../assets/achievment_border.svg';
             </div>
         </div>
     </div>
-    <Image src={Achievement} class="absolute z-10 mt-[80px] flex justify-center left-28" alt="achievement border" />
-    <Image src={AboutMeImg2} alt="me" class="h-[600px] w-full absolute object-cover bottom-0 z-0" />
-</section>
-<div class="w-full sh h-[1px] md:hidden"></div>
+    <div class="absolute flex justify-center w-full h-full">
+        <Image src={Achievement} class="relative z-10 mt-[80px] flex justify-center max-w-[204px] max-h-[247px]" alt="achievement border" />
+    </div>
 
+    <div class="absolute z-10 flex justify-center mt-4 w-full h-full items-end gap-[10px] max-h-[248px]">
+        <div class="flex flex-col gap-[10px] items-end">
+            <div class="h-[63px] w-[65px] flex justify-center items-center rounded-full group gr_icon relative z-20">
+                <Image src={Aws} class="max-h-[42px] max-w-[42px] w-full h-full relative z-10" alt="aws" />
+                <Image src={DarkBlur} class="group-active:opacity-100 transition-opacity max-w-[40px] max-h-[40px] h-full w-full top-5 opacity-40 absolute z-0" alt="react blur" />
+            </div>
+            <div class="h-[63px] w-[65px] flex justify-center items-center rounded-full group gr_icon relative z-20">
+                <Image src={Aws} class="max-h-[42px] max-w-[42px] w-full h-full relative z-10" alt="aws" />
+                <Image src={DarkBlur} class="group-active:opacity-100 transition-opacity max-w-[40px] max-h-[40px] h-full w-full top-5 opacity-40 absolute z-0" alt="react blur" />
+            </div>
+        </div>
+        <div class="flex flex-col gap-[10px]">
+            <div class="h-[63px] w-[65px] flex justify-center items-center rounded-full group gr_icon relative z-20">
+                <Image src={Aws} class="max-h-[42px] max-w-[42px] w-full h-full relative z-10" alt="aws" />
+                <Image src={DarkBlur} class="group-active:opacity-100 transition-opacity max-w-[40px] max-h-[40px] h-full w-full top-5 opacity-40 absolute z-0" alt="react blur" />
+            </div>
+            <div class="h-[63px] w-[65px] flex justify-center items-center rounded-full group gr_icon relative z-20">
+                <Image src={Aws} class="max-h-[42px] max-w-[42px] w-full h-full relative z-10" alt="aws" />
+                <Image src={DarkBlur} class="group-active:opacity-100 transition-opacity max-w-[40px] max-h-[40px] h-full w-full top-5 opacity-40 absolute z-0" alt="react blur" />
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full sh h-[10px] z-10 absolute mt-[-1rem] md:hidden"></div>
+    <div class="flex absolute w-full h-full items-start">
+        <Image src={AboutMeImg2} alt="me" class="w-full relative h-full object-cover top-0 z-0" />
+    </div>
+
+</section>
 <style>
     .sh {
-        box-shadow: rgba(171,171,171, 0.2) 10px 10px 40px;
+        box-shadow: rgba(0,0,0, 0.5) 20px 20px 30px;
     }
+     .gr_icon {
+         padding: .25rem;
+         border: 1px solid rgba(255, 255, 255, 0.3);
+         background: rgba(255, 255, 255, 0.20);
+     }
 </style>
