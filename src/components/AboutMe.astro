@@ -6,9 +6,9 @@ import AboutMeImg from '../../public/about_me_img.png';
 import YearsExpBorder from '../assets/exp_border.svg';
 import StackIcons from "./StackIcons.astro";
 import AboutMeImg2 from '../assets/about_me_img2.png';
+import Achievement from '../assets/achievment_border.svg';
 
 ---
-
 <section id="aboutme" class="md:hidden">
     <div class="flex flex-col mb-[25px] px-[40px]">
         <h1 class="text-[32px] font-valorax text-dark_purple purple-text-shadow">Station 1:</h1>
@@ -16,28 +16,27 @@ import AboutMeImg2 from '../assets/about_me_img2.png';
     </div>
     <p class="text-[16px] text-white px-[40px]">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
 </section>
-<section class="relative mt-[3rem] md:hidden">
+<section class="relative mt-[3rem] h-[1476px] md:hidden">
     <Image src={Bg} alt="background" class="max-h-[664px] absolute object-cover drop-shadow-lg" />
     <div class="w-full sh h-[1px]"></div>
-    <div class="h-fit w-full mt-[25px] flex flex-col items-center">
-        <Image src={AboutMeBorder} alt="background" class="w-full absolute max-h-[1376px] px-[25px] top-10 z-10" />
-        <Image src={AboutMeImg} alt="me" class="relative z-10 max-w-[204px] max-h-[261px] mt-[91px]" />
+    <div class="w-full mt-[25px] max-h-[1476px] flex flex-col items-center">
+        <Image src={AboutMeBorder} class="w-full absolute max-h-[1400px] px-[25px] top-10 z-10" alt="background" />
+        <Image src={AboutMeImg} class="relative z-10 max-w-[204px] max-h-[261px] mt-[91px]" alt="me" />
         <StackIcons />
-        <div class="flex flex-col items-center h-full w-full">
-            <Image src={YearsExpBorder} class="z-10 relative top-40" alt="years of experience" />
-            <div class="flex flex-col gap-[12px] relative z-10 px-[4rem] max-w-[300px] items-center justify-end mt-2">
+        <div class="flex flex-col items-center h-full w-full relative">
+            <Image src={YearsExpBorder} class="z-10 relative mt-6 top-14" alt="years of experience" />
+            <div class="flex flex-col gap-[12px] absolute z-10 px-[4rem] bottom-0 max-w-[300px] h-full items-center justify-end">
                 <h1 class="font-valorax text-dark_purple text-[25px]">3 years</h1>
                 <p class="text-white text-[16px] text-center">of commercial experience</p>
             </div>
         </div>
     </div>
+    <Image src={Achievement} class="absolute z-10 mt-[80px] flex justify-center left-28" alt="achievement border" />
+    <Image src={AboutMeImg2} alt="me" class="h-[600px] w-full absolute object-cover bottom-0 z-0" />
 </section>
 <div class="w-full sh h-[1px] md:hidden"></div>
-<div class="h-[600px] relative bottom-20 md:hidden">
-    <Image src={AboutMeImg2} alt="me" class="h-full w-full absolute object-cover bottom-0 z-0" />
-</div>
-<style>
 
+<style>
     .sh {
         box-shadow: rgba(171,171,171, 0.2) 10px 10px 40px;
     }
