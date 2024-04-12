@@ -16,18 +16,12 @@ const Project1Modal = () => {
     const handleClose = () => setIsOpen(false);
     const handleOpen = () => setIsOpen(true);
 
-
-    useEffect(() => {
-        document.body.style.overflow = isOpen ? "hidden" : "unset";
-    }, [isOpen]);
-
-
     return <>
         <Project1 onClick={handleOpen} />
         <AnimatePresence>
             { isOpen ? (
                 <>
-                        <div className={'absolute h-[2000px] w-screen z-10 bg-black bg-opacity-0'} onClick={handleClose}></div>
+                        <div className={'absolute h-[1000px] w-screen z-10 bg-black bg-opacity-0'} onClick={handleClose}></div>
                         <div className={'absolute max-h-[600px] h-full w-screen z-10 bg-black bg-opacity-100'}></div>
                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}  className={'relative flex justify-center flex-col w-full max-h-[2000px] items-center mb-[-4rem] z-10'}>
                             <img src={ProjectBorder.src} className={'absolute z-20 max-w-[289px] max-h-[527px]'} onClick={(e) => e.stopPropagation()} alt={'project border'} />
