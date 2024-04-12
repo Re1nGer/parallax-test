@@ -21,10 +21,10 @@ const Project2Modal = () => {
         <AnimatePresence>
             { isOpen ? (
                 <>
-                    <div className={'absolute h-[1000px] w-screen z-10 bg-black bg-opacity-0'} onClick={handleClose}></div>
-                    <div className={'absolute max-h-[600px] h-full w-screen z-10 bg-black bg-opacity-100'}></div>
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}  className={'relative flex justify-center flex-col w-full max-h-[2000px] mb-[8rem] items-center z-10'}>
-                        <img src={ProjectBorder.src} className={'absolute z-20 max-w-[289px] max-h-[527px]'} onClick={(e) => e.stopPropagation()} alt={'project border'} />
+                    <div className={'absolute h-[800px] w-screen z-10 bg-black bg-opacity-0'} onClick={handleClose}></div>
+                    <div className={'absolute max-h-[600px] h-full w-screen z-10 bg-black bg-opacity-100'} onClick={handleClose}></div>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={(e) => e.stopPropagation()} className={'relative flex justify-center flex-col w-full max-h-[2000px] mb-[8rem] items-center z-10'}>
+                        <img src={ProjectBorder.src} className={'absolute z-20 max-w-[289px] max-h-[527px]'} alt={'project border'} />
                         <div className={'max-h-[427px] overflow-y-auto w-full flex-col items-center flex absolute z-20'}>
                             <div className={'max-w-[289px] flex flex-col relative z-10 items-center'}>
                                 <p className={'text-white px-[25px] mb-[10px] text-center relative z-20'}>Designed and built medical portal for conducting research with participants and medical professionals</p>
