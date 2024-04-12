@@ -51,9 +51,14 @@ interface Props { }
 
 <script>
     const l1 = document.getElementById('m1');
+    const l2 = document.getElementById('m2');
 
     l1.addEventListener('click', function() {
         document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest', behavior: 'smooth' });
+    })
+
+    l2.addEventListener('click', function() {
+        document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
     })
 
 </script>

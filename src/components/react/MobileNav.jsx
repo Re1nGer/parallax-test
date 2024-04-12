@@ -19,7 +19,11 @@ const MobileNav = () => {
     }, [isOpen]);
 
     const handleNavigateToAboutMe = () => {
-        document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest' });
+        document.getElementById('aboutme').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+    }
+
+    const handleNavigateToWorkExp = () => {
+        document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
     }
 
     return <>
@@ -52,7 +56,7 @@ const MobileNav = () => {
                         </div>
                         <div className="flex-col flex gap-[6px] items-center">
                             <img src={Nav2.src} alt="nav"/>
-                            <h1 className="font-valorax text-[25px] text-white">Work Experience</h1>
+                            <h1 className="font-valorax text-[25px] text-white" onClick={handleNavigateToWorkExp}>Work Experience</h1>
                         </div>
                         <div className="flex-col flex gap-[6px] items-center">
                             <img src={Nav3.src} alt="nav"/>
