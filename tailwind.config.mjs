@@ -35,7 +35,9 @@ export default {
 			}
 		},
 		fontFamily: {
-			valorax: ['valorax', 'sans-serif'],
+			valorax: ['valorax',  'sans-serif'],
+			roboto: ['Roboto', 'sans-serif'],
+			grotesk: ['Soyuz Grotesk', 'sans-serif']
 		},
 	},
 	plugins: [],
