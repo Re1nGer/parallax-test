@@ -52,6 +52,7 @@ interface Props { }
 <script>
     const l1 = document.getElementById('m1');
     const l2 = document.getElementById('m2');
+    const l3 = document.getElementById('m3');
 
     l1.addEventListener('click', function() {
         document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest', behavior: 'smooth' });
@@ -59,6 +60,10 @@ interface Props { }
 
     l2.addEventListener('click', function() {
         document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+    })
+
+    l3.addEventListener('click', function() {
+        document.getElementById('side_projects').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
     })
 
 </script>
