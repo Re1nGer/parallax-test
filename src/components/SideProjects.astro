@@ -2,6 +2,7 @@
 import SideProjects from '../assets/side_projects_bg.png';
 import {Image} from "astro:assets";
 import Base from '../assets/handle.png';
+import SideProjectsSlider from "./react/SideProjectsSlider";
 ---
 
 
@@ -15,9 +16,11 @@ import Base from '../assets/handle.png';
 </section>
 
 <section class="relative z-10">
-    <Image src={SideProjects} class="w-screen max-h-[474px]" alt="side_projects" />
+    <Image src={SideProjects} class="w-screen max-h-[474px]" alt="side_projects" loading="eager" decoding="sync"  />
 </section>
+<SideProjectsSlider client:load />
 
+<!--
 <section class="flex flex-col relative z-10">
     <h1 class="text-dark_blue text-[25px] blue-text-shadow font-valorax text-center">Social App</h1>
 
@@ -75,8 +78,10 @@ import Base from '../assets/handle.png';
         </svg>
     </button>
 </section>
+-->
 
 
+<!--
 <script>
     import { gsap } from "gsap/dist/gsap";
     import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -89,7 +94,5 @@ import Base from '../assets/handle.png';
     timeline.fromTo('#light', { y: 150, scale: .50 }, { y: -25, scale: 1, duration: 1 })
         .to('#ball', { y:-100, duration: 1 }, "<")
         .to('#cross', { y:-100, duration: 1 }, "<")
-
-
-
 </script>
+-->
