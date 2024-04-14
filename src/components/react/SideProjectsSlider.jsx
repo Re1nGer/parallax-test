@@ -85,8 +85,11 @@ const SideProjectsSlider = () => {
                 )}
                 {isSliderOpen ? (
                     <motion.div exit={{opacity: 0}} className={'absolute h-[522px] w-[280px] z-30'}>
-                        <img className={'absolute h-[522px] scale-110 w-[300px] z-0'} src={SwiperBg.src}
-                             alt={'swiper bg'}/>
+                        <img
+                             className={'absolute h-[522px] scale-[115%] w-[300px] z-0'}
+                             src={SwiperBg.src}
+                             alt={'swiper bg'}
+                        />
                         <Swiper
                             className={'h-full w-full relative z-40'}
                             spaceBetween={40}
@@ -96,11 +99,11 @@ const SideProjectsSlider = () => {
                             modules={[Scrollbar]}
                         >
                             <SwiperSlide
-                                className={'bg-white max-w-[240px] w-full max-h-[370px] translate-y-[50px] translate-x-5 rounded-xl'}>
+                                className={'bg-white max-w-[240px] w-full max-h-[370px] translate-y-[100px] translate-x-[60px] rounded-xl'}>
                                 Image 1
                             </SwiperSlide>
                             <SwiperSlide
-                                className={'bg-white max-w-[240px] w-full max-h-[370px] translate-y-[50px] object-contain translate-x-[60px] rounded-xl'}>
+                                className={'bg-white max-w-[240px] w-full max-h-[370px] translate-y-[100px] object-contain translate-x-[120px] rounded-xl'}>
                                 Image 2
                             </SwiperSlide>
                         </Swiper>
