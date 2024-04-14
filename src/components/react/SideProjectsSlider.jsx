@@ -32,9 +32,8 @@ const SideProjectsSlider = () => {
         });
 
         timeline.fromTo('#light', { y: 150, scale: .50, opacity: .4 }, { y: -25, scale: 1, opacity: 1, duration: 1 })
-            .fromTo('#ball', { opacity: 0 }, { y:-100, opacity: 1, duration: 1 }, "<")
-            .fromTo('#base', { opacity: 0 }, { opacity: 1, duration: 1 }, "<")
-            .fromTo('#cross', { opacity: 0 }, { y:-100, opacity:1,  duration: 1 }, "<")
+            .to('#ball', { y:-100, duration: 1 }, "<")
+            .to('#cross', { y:-100, duration: 1 }, "<")
             .fromTo('#app_name', { opacity: 0 }, { opacity: 1, duration: 1 }, ">")
 
         gsap.fromTo('#app_description', { opacity: 0 },

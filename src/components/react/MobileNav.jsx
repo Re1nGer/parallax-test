@@ -16,15 +16,15 @@ const MobileNav = () => {
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "unset";
-        document.getElementsByTagName('html')[0].style.overflow = isOpen ? "hidden" : "unset";
+        //document.getElementsByTagName('html')[0].style.overflow = isOpen ? "hidden" : "unset";
     }, [isOpen]);
 
     const handleNavigateToAboutMe = () => {
-        //document.getElementById('aboutme').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+        document.getElementById('aboutme').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
     }
 
     const handleNavigateToWorkExp = () => {
-        //document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+        document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
     }
 
     return <>
