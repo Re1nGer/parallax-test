@@ -77,7 +77,7 @@ const SideProjectsSlider = () => {
                 {isSliderOpen && (
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        animate={{ opacity: .8 }}
                         exit={{ opacity: 0 }}
                         className={'absolute h-[2000px] w-full z-20 bg-black opacity-80'}
                         onClick={() => setIsSliderOpen(false)}
