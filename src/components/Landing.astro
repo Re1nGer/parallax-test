@@ -53,6 +53,7 @@ interface Props { }
     const l1 = document.getElementById('m1');
     const l2 = document.getElementById('m2');
     const l3 = document.getElementById('m3');
+    const l4 = document.getElementById('m4');
 
     l1.addEventListener('click', function() {
         document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest', behavior: 'smooth' });
@@ -64,6 +65,10 @@ interface Props { }
 
     l3.addEventListener('click', function() {
         document.getElementById('side_projects').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+    })
+
+    l4.addEventListener('click', function() {
+        document.getElementById('contacts').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
     })
 
 </script>
