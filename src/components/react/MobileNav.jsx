@@ -16,6 +16,7 @@ const MobileNav = () => {
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "unset";
+        document.getElementsByTagName('html')[0].style.overflow = isOpen ? "hidden" : "unset";
     }, [isOpen]);
 
     const handleNavigateToAboutMe = () => {
