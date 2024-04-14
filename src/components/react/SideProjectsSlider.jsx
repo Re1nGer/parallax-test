@@ -75,7 +75,10 @@ const SideProjectsSlider = () => {
             </svg>
             <AnimatePresence>
                 {isSliderOpen && (
-                    <div
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         className={'absolute h-[2000px] w-full z-20 bg-black opacity-80'}
                         onClick={() => setIsSliderOpen(false)}
                     />
