@@ -99,11 +99,11 @@ const SideProjectsSlider = () => {
                             modules={[Scrollbar]}
                         >
                             <SwiperSlide
-                                className={'bg-white max-w-[300px] w-full max-h-[400px] translate-y-[50px]  rounded-xl'}>
+                                className={'bg-white max-w-[300px] w-full max-h-[400px] translate-y-10  rounded-xl'}>
                                 Image 1
                             </SwiperSlide>
                             <SwiperSlide
-                                className={'bg-white max-w-[300px] w-full max-h-[400px] translate-y-[50px] rounded-xl'}>
+                                className={'bg-white max-w-[300px] w-full max-h-[400px] translate-y-10 rounded-xl'}>
                                 Image 2
                             </SwiperSlide>
                         </Swiper>
