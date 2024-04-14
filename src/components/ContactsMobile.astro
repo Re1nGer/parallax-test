@@ -8,17 +8,23 @@ import {Image} from "astro:assets";
 
 
 
-<section id="contacts" class="relative z-10 lg:max-w-[1920px]">
-    <div id="title" class="flex flex-col mb-[25px] px-[40px]">
-        <h1 class="text-[32px] font-valorax text-dark_purple purple-text-shadow">Station 4:</h1>
-        <h1 class="text-[32px] font-valorax text-black white-text-shadow">Contacts</h1>
+<section id="contacts" class="relative z-10 lg:max-w-[1920px] md:hidden">
+    <div id="title" class="flex flex-col mb-[25px] mt-[15px] px-[40px]">
+        <h1 id="station4" class="text-[32px] font-valorax text-dark_purple purple-text-shadow opacity-0">Station 4:</h1>
+        <h1 id="contacts_title" class="text-[32px] font-valorax text-black white-text-shadow opacity-0">Contacts</h1>
     </div>
-    <p class="text-[16px] text-white pl-[40px] text-left max-w-[240px]">Doesn’t it look like a disguised entrance to a secret underground club?</p>
+    <p id="entrance" class="text-[16px] text-white pl-[40px] text-left max-w-[240px] opacity-0">Doesn’t it look like a disguised entrance to a secret underground club?</p>
 
     <div id="links" class="flex flex-col items-center gap-[60px] mx-auto w-full absolute z-20 opacity-0">
-        <h1 id="linked" class="text-[32px] text-white header font-valorax">LinkedIn</h1>
-        <h1 id="github" class="text-[32px] text-white header font-valorax ">Github</h1>
-        <h1 id="email" class="text-[32px] text-white header font-valorax">Email</h1>
+        <h1 id="linked" class="text-[32px] text-white header font-valorax">
+           <a href="https://www.linkedin.com/in/bekjon-ibragimov" target="_blank">LinkedIn</a>
+        </h1>
+        <h1 id="github" class="text-[32px] text-white header font-valorax">
+            <a href="https://github.com/Re1nGer" target="_blank">GitHub</a>
+        </h1>
+        <h1 id="email" class="text-[32px] text-white header font-valorax">
+            <a href="mailto:bekjonibr@gmail.com">Email</a>
+        </h1>
     </div>
     <div class="font-semibold text-center text-white mt-[30px] hidden md:block">
         <p class="mx-auto leading-[32px] text-[28px] max-w-[506px]">
@@ -31,20 +37,6 @@ import {Image} from "astro:assets";
     <div id="trigger" class="max-h-[1200px] relative z-10">
         <div class="w-full h-full flex justify-center absolute max-h-[800px]">
             <Image id="light" src={Light} alt="light" class="max-w-[360px] max-h-[1200px] h-[400px] scale-y-150 z-10 absolute top-[-200px] opacity-0 origin-top" />
-<!--
-            <svg id="light" class="w-[1303px] h-[400px] -z-10 absolute top-[-200px] opacity-0 origin-top" width="400" height="800" viewBox="0 0 1525 826" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_f_156_302)">
-                    <path d="M111 893L765.251 111L1414 893H111Z" fill="#D0C5FF" fill-opacity="0.5"/>
-                </g>
-                <defs>
-                    <filter id="filter0_f_156_302" x="0.800003" y="0.800003" width="1523.4" height="1002.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                        <feGaussianBlur stdDeviation="55.1" result="effect1_foregroundBlur_156_302"/>
-                    </filter>
-                </defs>
-            </svg>
--->
         </div>
     </div>
     <div id="secret" class="font-semibold text-center text-white mx-auto flex justify-end text-[28px] pt-[3rem] relative z-20">
@@ -54,11 +46,6 @@ import {Image} from "astro:assets";
 <div class="relative w-full full">
     <Image id="crowd" src={Crowd} alt="light" class="h-[450px] w-full z-20 absolute bottom-0 opacity-0" />
 </div>
-<!--
-<div id="bottom_light" class="relative h-full w-full bottom-0 top-[800px] opacity-0">
-    <div id="bottom" class="h-[600px] w-full bg-[#D0C5FF] opacity-50 absolute bottom-0 z-10"></div>
-</div>
--->
 
 
 <script>
@@ -69,7 +56,11 @@ import {Image} from "astro:assets";
 
     gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
 
-    gsap.to('#bottom_light', { opacity: 1, duration: 1, scrollTrigger: { trigger: '#bottom', scrub: true, end:"+=20px" } })
+    gsap.to('#bottom_light', { opacity: 1, duration: 1, scrollTrigger: { trigger: '#bottom', scrub: true} })
+
+    gsap.to('#entrance', { opacity: 1, duration: 1, scrollTrigger: { trigger: '#entrance', scrub: true, start: 'top bottom' } })
+    gsap.to('#station4', { opacity: 1, duration: 1, scrollTrigger: { trigger: '#entrance', scrub: true, start: 'top bottom' } })
+    gsap.to('#contacts_title', { opacity: 1, duration: 1, scrollTrigger: { trigger: '#entrance', scrub: true, start: 'top bottom' } })
 
     gsap.to('#secret', {
         y: 850,
@@ -100,7 +91,7 @@ import {Image} from "astro:assets";
         scrollTrigger:  {
             once: false,
             trigger: '#car',
-            start: 'top center',
+            start: 'top top',
             scrub: true
         },
     });
