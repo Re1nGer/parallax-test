@@ -79,12 +79,12 @@ const SideProjectsSlider = () => {
                         initial={{opacity: 0}}
                         animate={{opacity: .8}}
                         exit={{opacity: 0}}
-                        className={'absolute h-[1000px] w-full z-10 bg-black opacity-80'}
+                        className={'absolute h-[2000px] w-full z-30 bg-black opacity-80'}
                         onClick={() => setIsSliderOpen(false)}
                     />
                 )}
                 {isSliderOpen ? (
-                    <motion.div exit={{opacity: 0}} className={'absolute h-[522px] w-[300px] z-30'}>
+                    <motion.div exit={{opacity: 0}} className={'absolute h-[522px] w-[300px] top-16 z-30'}>
                         <img
                              className={'absolute h-[522px] scale-[120%] w-[300px] z-0'}
                              src={SwiperBg.src}
@@ -99,11 +99,11 @@ const SideProjectsSlider = () => {
                             modules={[Scrollbar]}
                         >
                             <SwiperSlide
-                                className={'bg-white max-w-[300px] w-full max-h-[440px] mt-8 rounded-xl'}>
+                                className={'bg-white max-w-[300px] w-full max-h-[400px] mt-10 rounded-xl'}>
                                 Image 1
                             </SwiperSlide>
                             <SwiperSlide
-                                className={'bg-white max-w-[300px] w-full max-h-[440px] mt-8 rounded-xl'}>
+                                className={'bg-white max-w-[300px] w-full max-h-[400px] mt-10 rounded-xl'}>
                                 Image 2
                             </SwiperSlide>
                         </Swiper>

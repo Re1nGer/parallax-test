@@ -1,7 +1,7 @@
 const SideProjectNextBtn = ({ onClick, curIdx }) => {
     return <button
         onClick={onClick}
-        className="max-w-[107px] rounded-3xl px-[32px] py-[.2rem] my-[2rem] mx-auto border-dark_blue border-2">
+        className="max-w-[107px] rounded-3xl px-[32px] py-[.2rem] h-[50px] my-[2rem] mx-auto border-dark_blue border-2">
         <svg className={`max-w-[37px] ${curIdx === 1 ? "rotate-180" : ""}`} width="50" height="38"
              viewBox="0 0 50 38" fill="none"
              xmlns="http://www.w3.org/2000/svg">
