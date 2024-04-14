@@ -31,7 +31,7 @@ const SideProjectsSlider = () => {
             scrollTrigger: { trigger: '#base', start: "center bottom" }
         });
 
-        timeline.fromTo('#light', { y: 150, scale: .50 }, { y: -25, scale: 1, duration: 1 })
+        timeline.fromTo('#light', { y: 150, scale: .50, opacity: .4 }, { y: -25, scale: 1, opacity: 1, duration: 1 })
             .to('#ball', { y:-100, duration: 1 }, "<")
             .to('#cross', { y:-100, duration: 1 }, "<")
             .fromTo('#app_name', { opacity: 0 }, { opacity: 1, duration: 1 }, ">")
@@ -84,8 +84,8 @@ const SideProjectsSlider = () => {
                     />
                 )}
                 {isSliderOpen ? (
-                    <motion.div exit={{opacity: 0}} className={'absolute h-[522px] w-[310px] z-30'}>
-                        <img className={'absolute h-[522px] scale-125 w-[300px] z-0'} src={SwiperBg.src}
+                    <motion.div exit={{opacity: 0}} className={'absolute h-[522px] w-[280px] z-30'}>
+                        <img className={'absolute h-[522px] scale-110 w-[300px] z-0'} src={SwiperBg.src}
                              alt={'swiper bg'}/>
                         <Swiper
                             className={'h-full w-full relative z-40'}
@@ -96,11 +96,11 @@ const SideProjectsSlider = () => {
                             modules={[Scrollbar]}
                         >
                             <SwiperSlide
-                                className={'bg-white max-w-[300px] max-h-[440px] translate-y-10 rounded-xl'}>
+                                className={'bg-white max-w-[240px] w-full max-h-[370px] translate-y-[50px] translate-x-5 rounded-xl'}>
                                 Image 1
                             </SwiperSlide>
                             <SwiperSlide
-                                className={'bg-white max-w-[300px] w-full max-h-[440px] object-contain translate-y-10 rounded-xl'}>
+                                className={'bg-white max-w-[240px] w-full max-h-[370px] translate-y-[50px] object-contain translate-x-[60px] rounded-xl'}>
                                 Image 2
                             </SwiperSlide>
                         </Swiper>
