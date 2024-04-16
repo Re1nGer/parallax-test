@@ -20,7 +20,7 @@ interface Props { }
         <div id="landing_text" class="flex flex-col flex-1 relative z-10 max-w-[300px] lg:max-w-[420px]">
             <p class="text-white lg:text-left mb-[23px] lg:mb-[50px] text-[16px] lg:text-[28px] text-center">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
             <button class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[230px] text-[20px] lg:text-[30px] cv-btn font-valorax text-dark_purple py-[20px]">Cv</button>
-            <button class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[280px] text-[20px] lg:text-[30px] cv-btn font-valorax bg-dark_purple text-black py-[20px]">Experience</button>
+            <button id="expBtn" class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[280px] text-[20px] lg:text-[30px] cv-btn font-valorax bg-dark_purple text-black py-[20px]">Experience</button>
         </div>
         <div class="flex justify-center lg:justify-start relative flex-1 max-w-[900px]">
             <Image id="moon" src={Moon} alt="moon" class="max-w-[260px] max-h-[260px] md:max-w-[460px] md:max-h-[460px] m lg:max-w-[640px] lg:max-h-[640px] z-10 lg:mr-[-8rem]" />
@@ -54,6 +54,7 @@ interface Props { }
     const l2 = document.getElementById('m2');
     const l3 = document.getElementById('m3');
     const l4 = document.getElementById('m4');
+    const expBtn = document.getElementById('expBtn');
 
     l1.addEventListener('click', function() {
         document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest', behavior: 'smooth' });
@@ -69,6 +70,10 @@ interface Props { }
 
     l4.addEventListener('click', function() {
         document.getElementById('contacts').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+    })
+
+    expBtn.addEventListener('click', function () {
+        document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
     })
 
 </script>
