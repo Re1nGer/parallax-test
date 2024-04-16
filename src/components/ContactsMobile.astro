@@ -5,9 +5,7 @@ import Crowd from "../../public/crowd_mobile.png";
 import {Image} from "astro:assets";
 ---
 
-
-
-<section id="contacts" class="relative z-10 lg:max-w-[1920px]">
+<section id="contacts" class="relative z-10 lg:max-w-[1920px] md:hidden">
     <div id="title" class="flex flex-col mb-[25px] px-[40px]">
         <h1 class="text-[32px] font-valorax text-dark_purple purple-text-shadow">Station 4:</h1>
         <h1 class="text-[32px] font-valorax text-black white-text-shadow">Contacts</h1>
@@ -30,34 +28,15 @@ import {Image} from "astro:assets";
     <div id="trigger" class="max-h-[1200px] relative z-10">
         <div class="w-full h-full flex justify-center absolute max-h-[800px]">
             <Image id="light" src={Light} alt="light" class="max-w-[360px] max-h-[1200px] h-[400px] scale-y-150 z-10 absolute top-[-200px] opacity-0 origin-top" />
-<!--
-            <svg id="light" class="w-[1303px] h-[400px] -z-10 absolute top-[-200px] opacity-0 origin-top" width="400" height="800" viewBox="0 0 1525 826" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_f_156_302)">
-                    <path d="M111 893L765.251 111L1414 893H111Z" fill="#D0C5FF" fill-opacity="0.5"/>
-                </g>
-                <defs>
-                    <filter id="filter0_f_156_302" x="0.800003" y="0.800003" width="1523.4" height="1002.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                        <feGaussianBlur stdDeviation="55.1" result="effect1_foregroundBlur_156_302"/>
-                    </filter>
-                </defs>
-            </svg>
--->
         </div>
     </div>
     <div id="secret" class="font-semibold text-center text-white mx-auto flex justify-end text-[28px] pt-[3rem] relative z-20">
         <p class="max-w-[500px] absolute z-10 text-[16px] text-center px-[4rem] translate-y-24">Here you will be able to find the ways of  connecting to the person you have been looking for.</p>
     </div>
 </section>
-<div class="relative w-full full">
+<div class="relative w-full full md:hidden">
     <Image id="crowd" src={Crowd} alt="light" class="h-[450px] w-full z-20 absolute bottom-0 opacity-0" />
 </div>
-<!--
-<div id="bottom_light" class="relative h-full w-full bottom-0 top-[800px] opacity-0">
-    <div id="bottom" class="h-[600px] w-full bg-[#D0C5FF] opacity-50 absolute bottom-0 z-10"></div>
-</div>
--->
 
 
 <script>

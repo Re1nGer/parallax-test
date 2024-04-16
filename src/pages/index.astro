@@ -3,16 +3,20 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets'
 import Landing from "../components/Landing.astro";
 import Contacts from "../components/Contacts.astro";
-import AboutMe from "../components/AboutMe.astro";
+import AboutMeMobile from "../components/AboutMeMobile.astro";
 import Work from "../components/Work.astro";
 import SideProjects from "../components/SideProjects.astro";
 import ContactsMobile from "../components/ContactsMobile.astro";
+import AboutMe from "../components/AboutMe.astro";
 
 ---
 
 <Layout title="Welcome to Astro.">
 	<Landing />
+	<AboutMeMobile />
+<!--
 	<AboutMe />
+-->
 	<Work />
 	<SideProjects />
 	<ContactsMobile />
