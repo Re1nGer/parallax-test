@@ -12,7 +12,6 @@ import Golang from "../icons/GoLang.jsx";
 const Project3Modal = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-
     const handleClose = () => setIsOpen(false);
     const handleOpen = () => setIsOpen(true);
 
