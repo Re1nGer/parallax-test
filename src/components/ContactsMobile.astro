@@ -26,7 +26,7 @@ import {Image} from "astro:assets";
         <Image id="car" src={Car} alt="car" class="max-w-[1029px] w-full max-h-[634px]" />
     </div>
     <div id="trigger" class="max-h-[1200px] relative z-10">
-        <div class="w-full h-full flex justify-center absolute max-h-[800px]">
+        <div id="light_container" class="w-full h-full flex justify-center absolute max-h-[800px]">
             <Image id="light" src={Light} alt="light" class="max-w-[360px] max-h-[1200px] h-[400px] scale-y-150 z-10 absolute top-[-200px] opacity-0 origin-top" />
         </div>
     </div>
@@ -95,6 +95,10 @@ import {Image} from "astro:assets";
     });
 
     let isWebKit = navigator.userAgent.indexOf('AppleWebKit') != -1;
+
+    if (isWebKit) {
+        document.getElementById('light_container').classList.add('overflow-x-hidden')
+    }
 
     gsap.to('#light', {
         scaleY: 4,
