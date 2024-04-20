@@ -3,10 +3,17 @@ import AboutMeBg from '../../public/aboutme_bg.png'
 import AboutMeBorder from '../../public/about_me_border_desktop.svg';
 import AboutMeStackBorder from '../../public/aboutme_stack_border.svg';
 import { Image } from "astro:assets";
+import NET from './icons/.NET.jsx';
+import GoLang from './icons/GoLang';
+import Jest from './icons/Jest';
+import XUnit from './icons/Xunit';
+import YearsBg from '../../public/years_bg.svg';
+import AchievementsBg from '../../public/achievements_bg.svg';
+import MeBg from '../../public/MeBg.png';
 ---
 
 
-<section id="aboutme" class="h-[1344px] relative">
+<section id="aboutme" class="h-[1344px] relative hidden md:block">
     <div class="pt-[40px] px-[42px] pb-[60px] flex gap-[46px] justify-center">
         <h1 class="text-[45px] text-center header-shadow text-dark_purple relative z-10 uppercase mb-[10px] font-valorax">station 1 :</h1>
         <h1 class="text-[45px] text-center black-text-shadow text-white relative z-10 uppercase mb-[10px] font-valorax">about me</h1>
@@ -16,13 +23,38 @@ import { Image } from "astro:assets";
     </div>
     <Image src={AboutMeBg} class="absolute z-0 mt-[-4rem]" alt="about me bg" />
     <div class="flex justify-center mt-[100px]">
-        <Image src={AboutMeBorder} class="max-w-[1481px] max-h-[768px] z-20 relative" alt="about me border" />
+        <Image src={AboutMeBorder} class="max-w-[1029] max-h-[800px] h-full z-10 relative" alt="about me border" />
         <div class="max-w-[1481px] max-h-[768px] absolute">
-            <div class="flex justify-center items-center h-full gap-[70px] w-full">
-                <div class="max-w-[487px] max-h-[271px] relative">
-                    <Image src={AboutMeStackBorder} class="max-w-[487px] max-h-[271px] absolute" alt="about me stack border" />
+            <div class="flex justify-center items-center h-full gap-[70px] w-full mt-[6rem]">
+                <div class="relative flex justify-center items-center">
+                    <Image src={AboutMeStackBorder} class="max-w-[487px] max-h-[271px]" alt="about me stack border" />
+                    <div class="absolute flex flex-col justify-end gap-[10px] max-w-[300px] w-full z-10">
+                        <h1 class="text-light_purple text-[35px] font-valorax self-center">Stack</h1>
+                        <div class="flex gap-[10px]">
+                            <NET />
+                            <GoLang />
+                            <Jest />
+                            <XUnit />
+                            <GoLang />
+                        </div>
+                        <div class="flex gap-[10px] justify-center">
+                            <NET />
+                            <GoLang />
+                            <Jest />
+                            <XUnit />
+                        </div>
+                    </div>
                 </div>
-
+                <div class="flex flex-col">
+                    <div class="h-full w-full relative">
+                        <Image src={YearsBg} alt="years bg" />
+                        <h1 class="text-[30px] text-dark_purple font-valorax absolute top-0">Some text</h1>
+                    </div>
+                    <div class="h-full w-full relative">
+                        <Image src={AchievementsBg} alt="years bg" />
+                    </div>
+                </div>
+                <Image src={MeBg} alt="bg image" />
             </div>
         </div>
     </div>
