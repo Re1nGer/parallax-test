@@ -35,7 +35,7 @@ import {Image} from "astro:assets";
     </div>
 </section>
 <div class="relative w-full full lg:hidden">
-    <Image id="crowd" src={Crowd} alt="light" class="h-[450px] w-full z-20 md:object-cover  absolute bottom-0 opacity-0" />
+    <Image id="crowd" src={Crowd} alt="light" class="h-[450px] w-full z-20 md:object-cover absolute bottom-0 opacity-0" />
 </div>
 
 
@@ -94,9 +94,11 @@ import {Image} from "astro:assets";
         }
     });
 
+    let isWebKit = navigator.userAgent.indexOf('AppleWebKit') != -1;
+
     gsap.to('#light', {
         scaleY: 4,
-        scaleX: 3,
+        scaleX: isWebKit ? 2 : 3, //freezes up on webkit with value 3
         y: -200,
         duration: 1,
         scrollTrigger: {
