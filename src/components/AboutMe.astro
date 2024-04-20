@@ -10,10 +10,14 @@ import XUnit from './icons/Xunit';
 import YearsBg from '../../public/years_bg.svg';
 import AchievementsBg from '../../public/achievements_bg.svg';
 import MeBg from '../../public/MeBg.png';
+import AwsBadge from "./react/AwsBadge";
+import CodePair from "./react/CodePair";
+import LeetCodeBadge from "./react/LeetCodeBadge";
+import PullSharkBadge from "./react/PullSharkBadge";
 ---
 
 
-<section id="aboutme" class="h-[1344px] relative hidden md:block">
+<section id="aboutme" class="h-[1344px] relative hidden lg:block">
     <div class="pt-[40px] px-[42px] pb-[60px] flex gap-[46px] justify-center">
         <h1 class="text-[45px] text-center header-shadow text-dark_purple relative z-10 uppercase mb-[10px] font-valorax">station 1 :</h1>
         <h1 class="text-[45px] text-center black-text-shadow text-white relative z-10 uppercase mb-[10px] font-valorax">about me</h1>
@@ -25,8 +29,8 @@ import MeBg from '../../public/MeBg.png';
     <div class="flex justify-center mt-[100px]">
         <Image src={AboutMeBorder} class="max-w-[1029] max-h-[800px] h-full z-10 relative" alt="about me border" />
         <div class="max-w-[1481px] max-h-[768px] absolute">
-            <div class="flex justify-center items-center h-full gap-[70px] w-full mt-[6rem]">
-                <div class="relative flex justify-center items-center">
+            <div class="flex justify-center items-center h-full gap-[70px] w-full lg:mt-[6rem] xl:mt-[8rem]">
+                <div class="relative flex justify-center items-center self-start">
                     <Image src={AboutMeStackBorder} class="max-w-[487px] max-h-[271px]" alt="about me stack border" />
                     <div class="absolute flex flex-col justify-end gap-[10px] max-w-[300px] w-full z-10">
                         <h1 class="text-light_purple text-[35px] font-valorax self-center">Stack</h1>
@@ -48,10 +52,22 @@ import MeBg from '../../public/MeBg.png';
                 <div class="flex flex-col">
                     <div class="h-full w-full relative">
                         <Image src={YearsBg} alt="years bg" />
-                        <h1 class="text-[30px] text-dark_purple font-valorax absolute top-0">Some text</h1>
+                        <h1 class="text-[35px] text-dark_purple top-12 left-10 font-valorax absolute">3 years</h1>
+                        <p class="text-[25px] text-white absolute top-24 left-14">of commercial experience</p>
                     </div>
                     <div class="h-full w-full relative">
-                        <Image src={AchievementsBg} alt="years bg" />
+                        <Image src={AchievementsBg} alt="achievements bg" />
+                        <h1 class="text-[21px] text-light_purple absolute font-valorax top-12 left-8">achievements</h1>
+                        <div class="flex flex-col gap-[17px] absolute top-24 left-12">
+                            <div class="w-full h-full flex gap-[17px]">
+                                <AwsBadge />
+                                <LeetCodeBadge />
+                            </div>
+                            <div class="w-full h-full flex gap-[17px]">
+                                <CodePair />
+                                <PullSharkBadge />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Image src={MeBg} alt="bg image" />

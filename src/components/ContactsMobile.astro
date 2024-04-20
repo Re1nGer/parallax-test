@@ -5,7 +5,7 @@ import Crowd from "../../public/crowd_mobile.png";
 import {Image} from "astro:assets";
 ---
 
-<section id="contacts" class="relative z-10 lg:max-w-[1920px] md:hidden">
+<section id="contacts" class="relative z-10 lg:max-w-[1920px] lg:hidden">
     <div id="title" class="flex flex-col mb-[25px] px-[40px]">
         <h1 class="text-[32px] font-valorax text-dark_purple purple-text-shadow">Station 4:</h1>
         <h1 class="text-[32px] font-valorax text-black white-text-shadow">Contacts</h1>
@@ -34,7 +34,7 @@ import {Image} from "astro:assets";
         <p class="max-w-[500px] absolute z-10 text-[16px] text-center px-[4rem] translate-y-24">Here you will be able to find the ways of  connecting to the person you have been looking for.</p>
     </div>
 </section>
-<div class="relative w-full full md:hidden">
+<div class="relative w-full full lg:hidden">
     <Image id="crowd" src={Crowd} alt="light" class="h-[450px] w-full z-20 absolute bottom-0 opacity-0" />
 </div>
 

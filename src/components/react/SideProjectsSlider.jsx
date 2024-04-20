@@ -55,7 +55,7 @@ const SideProjectsSlider = () => {
         setCurIdx(0)
     }
 
-    return <div className={'overflow-hidden md:hidden'}>
+    return <div className={'overflow-hidden lg:hidden'}>
         <section id={'social'} className="flex flex-col w-full items-center justify-center z-10">
             <h1 id={'app_name'}
                 className="text-dark_blue text-[25px] blue-text-shadow font-valorax text-center">{curIdx === 0 ? 'Social App' : 'AlgoExpert Clone'} </h1>

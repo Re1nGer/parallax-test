@@ -16,15 +16,15 @@ import DarkBlur from "../assets/dark_blur.svg";
 import DarkGreen from '../assets/dark_green.svg';
 
 ---
-<section id="aboutme" class="md:hidden">
+<section id="aboutme" class="lg:hidden m-0 md:mt-[200px]">
     <div class="flex flex-col mb-[25px] px-[40px]">
         <h1 class="text-[32px] font-valorax text-dark_purple purple-text-shadow">Station 1:</h1>
         <h1 class="text-[32px] font-valorax text-black white-text-shadow">About Me</h1>
     </div>
     <p class="text-[16px] text-white px-[40px]">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
 </section>
-<section class="relative mt-[3rem] h-[600px] md:hidden">
-    <Image src={Bg} alt="background" class="max-h-[664px] absolute object-cover drop-shadow-lg" />
+<section class="relative mt-[3rem] h-[600px] lg:hidden w-full">
+    <Image src={Bg} alt="background" class="max-h-[664px] w-full absolute object-cover drop-shadow-lg" />
     <div class="w-full sh h-[1px]"></div>
     <div class="w-full mt-[25px] max-h-[1476px] flex flex-col items-center">
         <Image src={AboutMeBorder} class="absolute h-[1376px] top-12 z-10" alt="background" />
@@ -65,7 +65,7 @@ import DarkGreen from '../assets/dark_green.svg';
         </div>
     </div>
 
-    <div class="w-full sh h-[10px] z-10 absolute mt-[-1rem] md:hidden"></div>
+    <div class="w-full sh h-[10px] z-10 absolute mt-[-1rem] lg:hidden"></div>
     <div class="flex absolute w-full h-full items-start">
         <Image src={AboutMeImg2} alt="me" class="w-full relative h-full object-cover top-0 z-0" />
     </div>

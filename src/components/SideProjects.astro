@@ -5,7 +5,7 @@ import Base from '../assets/handle.png';
 import SideProjectsSlider from "./react/SideProjectsSlider";
 ---
 
-<section id="side_projects" class="md:hidden mb-[47px]">
+<section id="side_projects" class="lg:hidden mb-[47px]">
     <div class="flex flex-col mb-[25px] px-[40px]">
         <h1 class="text-[32px] font-valorax text-dark_blue blue-text-shadow">Station 3 :</h1>
         <h1 class="text-[32px] font-valorax text-black white-text-shadow">Side Projects</h1>
@@ -13,8 +13,8 @@ import SideProjectsSlider from "./react/SideProjectsSlider";
     <p class="text-[16px] text-white px-[40px]">Step into the Corporate Matrix Core, where each project is a guarded secret file on a different security level.</p>
 </section>
 
-<section class="relative z-10 md:hidden">
-    <Image src={SideProjects} class="w-screen max-h-[474px]" alt="side_projects" loading="eager" decoding="sync"  />
+<section class="relative z-10 lg:hidden">
+    <Image src={SideProjects} class="w-screen max-h-[474px] md:object-cover" alt="side_projects" loading="eager" decoding="sync"  />
 </section>
 
 <SideProjectsSlider client:load />
