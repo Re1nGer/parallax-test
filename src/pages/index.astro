@@ -9,16 +9,21 @@ import SideProjectsMobile from "../components/SideProjectsMobile.astro";
 import ContactsMobile from "../components/ContactsMobile.astro";
 import AboutMe from "../components/AboutMe.astro";
 import WorkMobile from "../components/WorkMobile.astro";
+import SideProjects from "../components/SideProjects.astro";
 
 ---
 
 <Layout title="Welcome to Astro.">
-	<Landing />
-	<AboutMeMobile />
-	<AboutMe />
-	<Work />
-	<WorkMobile />
-	<SideProjectsMobile />
-	<ContactsMobile />
+	<Landing client:load />
+	<AboutMeMobile client:visible />
+	<AboutMe client:visible />
+	<Work client:visible />
+	<WorkMobile client:visible />
+	<SideProjects client:visible />
+	<SideProjectsMobile client:visible />
+	<ContactsMobile client:load />
+<!--
+	<Contacts />
+-->
 </Layout>
 

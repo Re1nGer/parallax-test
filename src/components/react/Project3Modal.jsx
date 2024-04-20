@@ -28,12 +28,12 @@ const Project3Modal = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={(e) => e.stopPropagation()}
-                        className={'relative flex justify-end flex-col w-full max-h-[600px] items-center z-10'}
+                        className={'relative flex justify-end flex-col w-full max-h-[2000px] items-center z-10'}
                     >
                         <img src={ProjectBorderDesktop.src} className={'absolute z-20 max-w-[597px] max-h-[900px] hidden lg:block'}  alt={'project border'} />
                         <img src={ProjectBorder.src} className={'absolute z-20 max-w-[289px] max-h-[527px] lg:hidden'} alt={'project border'} />
-                        <div className={'max-h-[427px] lg:max-h-[800px] lg:h-[1000px] lg:max-w-[597px] overflow-y-auto w-full flex-col items-center lg:justify-start flex absolute z-20'}>
-                            <div className={'max-w-[289px] flex flex-col relative z-10 items-center'}>
+                        <div className={'h-[450px] lg:max-h-[800px] lg:h-[1000px] lg:max-w-[597px] overflow-y-auto w-full flex-col items-center lg:justify-start flex absolute z-20'}>
+                            <div className={'max-w-[289px] flex flex-col relative z-10 lg:mb-[42px] items-center'}>
                                 <p className={'text-white px-[25px] mb-[10px] text-center relative z-20 lg:max-w-[600px] lg:px-0 lg:leading-none lg:text-[25px]'}>Developed Server-side logic for Covid Green Certificate Portal</p>
                                 <h1 className={'text-dark_blue text-[25px] font-valorax blue-text-shadow lg:text-[35px] lg:mt-8'}>stack:</h1>
                             </div>
@@ -49,11 +49,11 @@ const Project3Modal = () => {
                             </div>
                             <div className={'flex gap-[.5rem] lg:gap-[16px] max-w-[250px] lg:max-w-[475px] mt-[30px]'}>
                                 <img src={Network.src} className={'relative z-30 self-start'} alt={'n'} />
-                                <p className={'text-white text-left leading-none'}>Created Microservices API in Golang for handling business logic which would serve 1 million people across Latvia</p>
+                                <p className={'text-white lg:text-[22px] text-left leading-none'}>Created Microservices API in Golang for handling business logic which would serve 1 million people across Latvia</p>
                             </div>
                             <div className={'flex gap-[.5rem] lg:gap-[16px] max-w-[250px] lg:max-w-[475px] mt-[30px]'}>
                                 <img src={Network.src} className={'relative z-30 self-start'} alt={'n'} />
-                                <p className={'text-white text-left leading-none'}>Implemented integration tests resulting in less failed builds and more maintainable codebase</p>
+                                <p className={'text-white lg:text-[22px] text-left leading-none'}>Implemented integration tests resulting in less failed builds and more maintainable codebase</p>
                             </div>
                         </div>
                     </motion.div>

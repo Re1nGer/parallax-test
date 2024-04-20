@@ -7,12 +7,11 @@ import Bg from "../../public/bg.png";
 import { Image } from 'astro:assets'
 ---
 
-<section class="relative z-10 lg:max-w-[1920px]">
-    <div id="title" class="flex flex-col mb-[25px] px-[40px]">
-        <h1 id="header" class="text-[32px] font-valorax text-dark_blue blue-text-shadow">Station 2:</h1>
-        <h1 class="text-[32px] font-valorax text-black white-text-shadow">Work Experience</h1>
+<section class="relative z-10 lg:max-w-[1920px] hidden lg:block">
+    <div class="pt-[80px] px-[42px] pb-[60px] flex gap-[46px] justify-center">
+        <h1 class="text-[45px] text-center header-shadow text-dark_blue relative z-10 uppercase mb-[10px] font-valorax">station 4 :</h1>
+        <h1 class="text-[45px] text-center text-black white-text-shadow relative z-10 uppercase mb-[10px] font-valorax">Contacts</h1>
     </div>
-    <p class="text-[16px] text-white px-[40px]">Step into the Corporate Matrix Core, where each project is a guarded secret file on a different security level.</p>
     <div id="links" class="flex gap-[80px] mx-auto w-full absolute left-[50px] xl:left-[400px] z-1 opacity-0">
         <h1 id="linked" class="text-[60px] text-white header">LinkedId</h1>
         <h1 id="github" class="text-[60px] text-white header">Github</h1>
@@ -30,7 +29,7 @@ import { Image } from 'astro:assets'
         <p class="max-w-[500px] absolute z-10">Here you will be able to find the ways of  connecting to the person you have been looking for.</p>
     </div>
 </section>
-<div id="trigger" class="max-h-[1920px] relative z-10">
+<div id="trigger" class="max-h-[1920px] relative z-10 hidden lg:block">
     <div class="w-full h-full flex justify-center relative max-h-[1920px]">
         <Image id="light" src={Light} alt="light" class="lg:max-w-[1303px] max-w-[300px] max-h-[1920px] z-0 absolute top-[-300px] opacity-0 origin-top" />
     </div>

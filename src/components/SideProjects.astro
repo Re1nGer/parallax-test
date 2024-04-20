@@ -1,0 +1,22 @@
+---
+import SideProjectsDesktop from '../assets/side_projects_desktop.png';
+import SideProjectsSlider from "./react/SideProjectsSlider";
+import {Image} from "astro:assets";
+---
+
+
+<section id="sideprojects" class="relative hidden lg:block">
+    <div class="pt-[80px] px-[42px] pb-[60px] flex gap-[46px] justify-center">
+        <h1 class="text-[45px] text-center header-shadow text-dark_blue relative z-10 uppercase mb-[10px] font-valorax">station 3 :</h1>
+        <h1 class="text-[45px] text-center text-black white-text-shadow relative z-10 uppercase mb-[10px] font-valorax">Side Projects</h1>
+    </div>
+    <div class="w-full flex justify-center">
+        <p class="text-white max-w-[506px] text-[28px] text-shadow text-center relative z-0 flex justify-center">Welcome to the Cyberpunk Market. Explore holographic displays representing unique creations waiting to be discovered.</p>
+    </div>
+    <div class="relative flex">
+        <Image src={SideProjectsDesktop} class="lg:max-w-[800px] xl:max-w-[1190px] w-full object-contain" alt="side projects bg" />
+        <div class="self-center flex-1">
+            <SideProjectsSlider client:load />
+        </div>
+    </div>
+</section>

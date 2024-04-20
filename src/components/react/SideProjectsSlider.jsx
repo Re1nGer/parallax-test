@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import { Scrollbar } from "swiper/modules";
 import SideProjectIcons from "./SideProjectIcons.jsx";
 import SideProjectNextBtn from "./SideProjectNextBtn.jsx";
+import SliderBorder from '../../assets/slider_bg_desktop.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,10 +56,14 @@ const SideProjectsSlider = () => {
         setCurIdx(0)
     }
 
-    return <div className={'overflow-hidden lg:hidden'}>
+    return <div className={'overflow-hidden max-w-[3000px]'}>
         <section id={'social'} className="flex flex-col w-full items-center justify-center z-10">
+
             <h1 id={'app_name'}
-                className="text-dark_blue text-[25px] blue-text-shadow font-valorax text-center">{curIdx === 0 ? 'Social App' : 'AlgoExpert Clone'} </h1>
+                className="text-dark_blue text-[25px] blue-text-shadow font-valorax text-center">
+                {curIdx === 0 ? 'Social App' : 'AlgoExpert Clone'}
+            </h1>
+
             <svg id="light" className="mx-auto" width="342" height="297" viewBox="0 0 342 297" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_146_380)">
@@ -73,21 +78,30 @@ const SideProjectsSlider = () => {
                     </filter>
                 </defs>
             </svg>
+
             <AnimatePresence>
                 {isSliderOpen && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: .8 }}
                         exit={{ opacity: 0 }}
-                        className={'absolute h-[2000px] w-full z-20 bg-black opacity-80'}
+                        className={'absolute h-[2000px] w-full z-20 bg-black opacity-80 lg:hidden'}
                         onClick={() => setIsSliderOpen(false)}
                     />
                 )}
                 {isSliderOpen ? (
-                    <motion.div exit={{opacity: 0}} className={'absolute h-[522px] w-[300px] -translate-y-8 z-30'}>
+                    <motion.div
+                        exit={{opacity: 0}}
+                        className={'absolute h-[522px] w-[300px] -translate-y-8 z-30 lg:hidden'}
+                    >
                         <img
-                            className={'absolute h-[522px] scale-[120%] w-[300px] z-0'}
+                            className={'absolute h-[522px] scale-[120%] w-[300px] z-0 lg:hidden'}
                             src={SwiperBg.src}
+                            alt={'swiper bg'}
+                        />
+                        <img
+                            className={'absolute h-[852px] z-0'}
+                            src={SliderBorder.src}
                             alt={'swiper bg'}
                         />
                         <Swiper
@@ -110,6 +124,7 @@ const SideProjectsSlider = () => {
                     </motion.div>
                 ) : null}
             </AnimatePresence>
+
             <div id="ball" className="flex justify-center items-center" onClick={() => setIsSliderOpen(true)}>
                 <svg id="ball" className="absolute" width="96" height="93" viewBox="0 0 96 93" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
