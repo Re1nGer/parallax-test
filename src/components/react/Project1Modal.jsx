@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useState } from "react";
 import ProjectBorder from '../../assets/project_border.svg';
 import Project1 from "./Project1.jsx";
 import {AnimatePresence, motion} from "framer-motion";
@@ -8,11 +8,9 @@ import XUnitIcon from '../icons/Xunit.jsx';
 import ReactIcon from '../icons/React.jsx';
 import Network from '../../assets/Network.svg';
 
-
 const Project1Modal = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-
     const handleClose = () => setIsOpen(false);
     const handleOpen = () => setIsOpen(true);
 
@@ -23,7 +21,13 @@ const Project1Modal = () => {
                 <>
                     <div className={'absolute h-[800px] w-screen z-10 bg-black bg-opacity-0'} onClick={handleClose}></div>
                     <div className={'absolute max-h-[600px] h-full w-screen z-10 bg-black bg-opacity-100'} onClick={handleClose}></div>
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={(e) => e.stopPropagation()} className={'relative flex justify-center flex-col w-full max-h-[2000px] items-center mb-[-4rem] z-10'}>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={(e) => e.stopPropagation()}
+                        className={'relative flex justify-center flex-col w-full max-h-[2000px] items-center mb-[-4rem] z-10'}
+                    >
                         <img src={ProjectBorder.src} className={'absolute z-20 max-w-[289px] max-h-[527px]'}  alt={'project border'} />
                         <div className={'max-h-[427px] overflow-y-auto w-full flex-col items-center flex absolute z-20'}>
                             <div className={'max-w-[289px] flex flex-col relative z-10 items-center'}>

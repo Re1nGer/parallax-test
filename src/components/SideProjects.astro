@@ -1,20 +1,30 @@
 ---
-import SideProjects from '../assets/side_projects_bg.png';
+
+import Project2Modal from "./react/Project2Modal";
+import Project1Modal from "./react/Project1Modal";
+import Project3Modal from "./react/Project3Modal";
+import Tower from "../assets/tower_desktop.png";
 import {Image} from "astro:assets";
-import Base from '../assets/handle.png';
-import SideProjectsSlider from "./react/SideProjectsSlider";
+
 ---
 
-<section id="side_projects" class="lg:hidden mb-[47px]">
-    <div class="flex flex-col mb-[25px] px-[40px]">
-        <h1 class="text-[32px] font-valorax text-dark_blue blue-text-shadow">Station 3 :</h1>
-        <h1 class="text-[32px] font-valorax text-black white-text-shadow">Side Projects</h1>
+
+<section id="work" class="relative hidden lg:block">
+    <div class="pt-[40px] px-[42px] pb-[60px] flex gap-[46px] justify-center">
+        <h1 class="text-[45px] text-center header-shadow text-dark_blue relative z-10 uppercase mb-[10px] font-valorax">station 2 :</h1>
+        <h1 class="text-[45px] text-center text-black white-text-shadow relative z-10 uppercase mb-[10px] font-valorax">Work Experience</h1>
     </div>
-    <p class="text-[16px] text-white px-[40px]">Step into the Corporate Matrix Core, where each project is a guarded secret file on a different security level.</p>
-</section>
+    <div class="w-full flex justify-center">
+        <p class="text-white max-w-[506px] text-[28px] text-shadow text-center relative z-10 flex justify-center">Step into the Corporate Matrix Core, where each project is a guarded secret file on a different security level.</p>
+    </div>
 
-<section class="relative z-10 lg:hidden">
-    <Image src={SideProjects} class="w-screen max-h-[474px] md:object-cover" alt="side_projects" loading="eager" decoding="sync"  />
-</section>
+    <section class="relative px-[35px]  max-w-[1500px] mx-auto">
+        <Image src={Tower} class="max-w-[612px] max-h-[1000px] mt-9" alt="tower" />
+        <div class="absolute w-full top-4 right-0 h-full flex flex-col justify-around">
+            <Project1Modal client:load />
+            <Project2Modal client:load />
+            <Project3Modal client:load />
+        </div>
+    </section>
 
-<SideProjectsSlider client:load />
+</section>
