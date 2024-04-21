@@ -5,14 +5,13 @@ import Crowd from "../../public/crowd_mobile.png";
 import {Image} from "astro:assets";
 ---
 
-<section id="contacts" class="relative z-10 lg:max-w-[1920px] lg:hidden">
-    <div id="title" class="flex flex-col mb-[25px] px-[40px]">
+<section id="contacts" class="relative z-10 lg:hidden">
+    <div class="flex flex-col mb-[25px] px-[40px]">
         <h1 class="text-[32px] font-valorax text-dark_purple purple-text-shadow">Station 4:</h1>
         <h1 class="text-[32px] font-valorax text-black white-text-shadow">Contacts</h1>
     </div>
     <p class="text-[16px] text-white pl-[40px] text-left max-w-[240px]">Doesn’t it look like a disguised entrance to a secret underground club?</p>
-
-    <div id="links" class="flex flex-col items-center gap-[60px] mx-auto w-full absolute z-20 opacity-0">
+    <div id="links_mb" class="flex flex-col items-center gap-[60px] mx-auto w-full absolute z-20 opacity-0">
         <h1 id="linked" class="text-[32px] text-white header font-valorax">LinkedIn</h1>
         <h1 id="github" class="text-[32px] text-white header font-valorax ">Github</h1>
         <h1 id="email" class="text-[32px] text-white header font-valorax">Email</h1>
@@ -23,19 +22,19 @@ import {Image} from "astro:assets";
         </p>
     </div>
     <div class="flex justify-center">
-        <Image id="car" src={Car} alt="car" class="max-w-[1029px] w-full max-h-[634px]" />
+        <Image id="car_mb" src={Car} alt="car" class="max-w-[1029px] w-full max-h-[634px]" />
     </div>
-    <div id="trigger" class="max-h-[1200px] relative z-10">
-        <div id="light_container" class="w-full h-full flex justify-center absolute max-h-[800px]">
-            <Image id="light" src={Light} alt="light" class="max-w-[360px] max-h-[1200px] h-[400px] scale-y-150 z-10 absolute top-[-200px] opacity-0 origin-top" />
+    <div class="max-h-[1200px] relative z-10 w-[360px]">
+        <div id="light_container" class="h-full flex justify-center absolute max-h-[800px] w-full">
+            <Image id="light_mb" src={Light} alt="light" class="max-w-[360px] max-h-[1200px] h-[400px] scale-y-150 z-10 absolute top-[-200px] opacity-0 origin-top" />
         </div>
     </div>
-    <div id="secret" class="font-semibold text-center text-white mx-auto flex justify-end text-[28px] pt-[3rem] relative z-20">
+    <div id="secret_mb" class="font-semibold text-center text-white mx-auto flex justify-center text-[28px] pt-[3rem] relative z-20">
         <p class="max-w-[500px] absolute z-10 text-[16px] text-center px-[4rem] translate-y-24">Here you will be able to find the ways of  connecting to the person you have been looking for.</p>
     </div>
 </section>
 <div class="relative w-full full lg:hidden">
-    <Image id="crowd" src={Crowd} alt="light" class="h-[450px] w-full z-20 md:object-cover absolute bottom-0 opacity-0" />
+    <Image id="crowd_mb" src={Crowd} alt="light" class="h-[450px] w-full z-20 md:object-cover absolute bottom-0 opacity-0" />
 </div>
 
 
@@ -47,99 +46,94 @@ import {Image} from "astro:assets";
 
     gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
 
+/*
     gsap.to('#bottom_light', { opacity: 1, duration: 1, scrollTrigger: { trigger: '#bottom', scrub: true, end:"+=20px" } })
+*/
 
-    gsap.to('#secret', {
+    gsap.to('#secret_mb', {
         y: 850,
         opacity: 0,
         duration: 1,
         scrollTrigger:  {
-            trigger: '#car',
+            trigger: '#car_mb',
             scrub: true,
             start: "center top",
             end: "+=300px"
         },
     });
 
-    gsap.to('#links', {
+    gsap.to('#links_mb', {
         y: 900,
         opacity: 1,
         duration: 1,
         scrollTrigger:  {
-            trigger: '#crowd',
+            trigger: '#crowd_mb',
             scrub: true,
-            end:"+=100px",
-            start: "top center",
+            start: "center top",
+            end:"+=150px"
         },
     });
 
-    gsap.to('#car', {
+    gsap.to('#car_mb', {
         scale: 0.8,
         scrollTrigger:  {
-            once: false,
-            trigger: '#car',
+            trigger: '#car_mb',
             start: 'top center',
             scrub: true
         },
     });
 
-    gsap.to('#light', {
+    gsap.to('#light_mb', {
         opacity: 1,
         duration: 1,
         scrollTrigger: {
-            trigger: '#car',
+            trigger: '#car_mb',
             start: 'top center',
             scrub: true,
             end:"+=200px"
         }
     });
 
-    let isWebKit = navigator.userAgent.indexOf('AppleWebKit') != -1;
-
-    if (isWebKit) {
-        document.getElementById('light_container').classList.add('overflow-x-hidden')
-    }
-
-    gsap.to('#light', {
+    gsap.to('#light_mb', {
         scaleY: 4,
-        scaleX: isWebKit ? 2 : 3, //freezes up on webkit with value 3
+        scaleX: 3, //freezes up on webkit with value 3
         y: -200,
         duration: 1,
         scrollTrigger: {
-            trigger: '#car',
+            trigger: '#car_mb',
             start: 'center top',
             scrub: true,
             end:"+=50",
         }
     });
 
-    gsap.to('#light', {
+    gsap.to('#light_mb', {
         y: -100,
         duration: 1,
         scrollTrigger: {
-            trigger: '#crowd',
+            trigger: '#crowd_mb',
             start: 'center top',
             scrub: true,
             end:"+=250",
         }
     });
 
-    gsap.to('#crowd', {
+    gsap.to('#crowd_mb', {
         opacity: 1,
         duration: .5,
         scrollTrigger: {
-            trigger: '#crowd',
+            trigger: '#crowd_mb',
             start: 'top bottom',
             scrub: true,
             end: "+=50px"
         }
     });
 
-    gsap.to('#crowd', {
+    gsap.to('#crowd_mb', {
         y: 1250,
         duration: 1,
         scrollTrigger: {
-            trigger: '#crowd',
+            trigger: '#crowd_mb',
             start: 'top bottom',
             scrub: true,
             end: "+=100px"
