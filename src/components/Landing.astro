@@ -66,6 +66,9 @@ interface Props { }
 </script>
 
 <script>
+
+    const isMobile = window.innerWidth < 1024;
+
     const m1 = document.getElementById('m1');
     const m2 = document.getElementById('m2');
     const m3 = document.getElementById('m3');
@@ -111,7 +114,12 @@ interface Props { }
     })
 
     expBtn.addEventListener('click', function () {
-        document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+        if (isMobile) {
+            document.getElementById('work_mb').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+        }
+        else {
+            document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+        }
     })
 
 </script>
