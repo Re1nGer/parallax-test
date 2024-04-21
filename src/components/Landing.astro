@@ -50,11 +50,33 @@ interface Props { }
 </section>
 
 <script>
-    const l1 = document.getElementById('m1');
-    const l2 = document.getElementById('m2');
-    const l3 = document.getElementById('m3');
-    const l4 = document.getElementById('m4');
+    const m1 = document.getElementById('m1');
+    const m2 = document.getElementById('m2');
+    const m3 = document.getElementById('m3');
+    const m4 = document.getElementById('m4');
+
+    const l1 = document.getElementById('l1');
+    const l2 = document.getElementById('l2');
+    const l3 = document.getElementById('l3');
+    const l4 = document.getElementById('l4');
+
     const expBtn = document.getElementById('expBtn');
+
+    m1.addEventListener('click', function() {
+        document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest', behavior: 'smooth' });
+    })
+
+    m2.addEventListener('click', function() {
+        document.getElementById('work').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+    })
+
+    m3.addEventListener('click', function() {
+        document.getElementById('side_projects').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+    })
+
+    m4.addEventListener('click', function() {
+        document.getElementById('contacts_mb').scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'smooth' });
+    })
 
     l1.addEventListener('click', function() {
         document.getElementById('aboutme').scrollIntoView({ block: 'start', inline:'nearest', behavior: 'smooth' });

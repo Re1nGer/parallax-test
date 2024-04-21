@@ -1,29 +1,30 @@
 ---
-import Tower from '../assets/tower.png';
-import {Image} from "astro:assets";
-import Project1Modal from "./react/Project1Modal";
+
 import Project2Modal from "./react/Project2Modal";
+import Project1Modal from "./react/Project1Modal";
 import Project3Modal from "./react/Project3Modal";
+import Tower from "../assets/tower_desktop.png";
+import {Image} from "astro:assets";
+
 ---
 
-<section id="work" class="lg:hidden mb-[47px] mt-[1100px] sh">
-    <div class="flex flex-col mb-[25px] px-[40px]">
-        <h1 class="text-[32px] font-valorax text-dark_blue blue-text-shadow">Station 2:</h1>
-        <h1 class="text-[32px] font-valorax text-black white-text-shadow">Work Experience</h1>
+
+<section id="work" class="relative hidden lg:block">
+    <div class="pt-[40px] px-[42px] pb-[60px] flex gap-[46px] justify-center">
+        <h1 class="text-[45px] text-center header-shadow text-dark_blue relative z-10 uppercase mb-[10px] font-valorax">station 2 :</h1>
+        <h1 class="text-[45px] text-center text-black white-text-shadow relative z-10 uppercase mb-[10px] font-valorax">Work Experience</h1>
     </div>
-    <p class="text-[16px] text-white px-[40px]">Step into the Corporate Matrix Core, where each project is a guarded secret file on a different security level.</p>
-    <section class="relative px-[35px]">
-        <Image src={Tower} class="max-w-[251px] max-h-[563px] mt-9" alt="tower" />
-        <div class="absolute w-full top-0 right-0 h-full flex flex-col justify-center gap-[40px]">
+    <div class="w-full flex justify-center">
+        <p class="text-white max-w-[506px] text-[28px] text-shadow text-center relative z-0 flex justify-center">Step into the Corporate Matrix Core, where each project is a guarded secret file on a different security level.</p>
+    </div>
+
+    <section class="relative px-[35px]  max-w-[1500px] mx-auto">
+        <Image src={Tower} class="max-w-[612px] max-h-[1000px] mt-9" alt="tower" />
+        <div class="absolute w-full top-4 right-0 h-full flex flex-col justify-around">
             <Project1Modal client:load />
             <Project2Modal client:load />
             <Project3Modal client:load />
         </div>
     </section>
-</section>
 
-<style>
-    .sh {
-        box-shadow: rgba(0,0,0, 0.5) 20px 20px 30px;
-    }
-</style>
+</section>
