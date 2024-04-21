@@ -19,7 +19,7 @@ interface Props { }
     <div class="flex xl:px-[30px] 2xl:px-[180px] px-0 md:px-[30px] justify-start flex-col-reverse items-center lg:items-start lg:flex-row gap-[30px] 2xl:gap-[60px]">
         <div id="landing_text" class="flex flex-col flex-1 relative z-10 max-w-[300px] xl:max-w-[420px] justify-end">
             <p class="text-white lg:text-left mb-[23px] lg:mb-[50px] text-[16px] md:text-[20px] xl:text-[28px] text-center">Begin your journey through the stations of our planet, uncovering the essence of the developer behind the scenes.</p>
-            <button class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[230px] text-[20px] md:text-[30px] xl:text-[30px] cv-btn font-valorax text-dark_purple py-[20px]">Cv</button>
+            <button id="cvBtn" class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[230px] text-[20px] md:text-[30px] xl:text-[30px] cv-btn font-valorax text-dark_purple py-[20px]">Cv</button>
             <button id="expBtn" class="border-dark_purple mb-[25px] border-[2px] lg:max-w-[280px] md:text-[30px] xl:text-[30px] cv-btn font-valorax bg-dark_purple text-black py-[20px]">Experience</button>
         </div>
         <div class="flex justify-center lg:justify-center md:items-center relative flex-1 lg:max-[600px] xl:max-w-[900px]">
@@ -48,6 +48,22 @@ interface Props { }
         </div>
     </div>
 </section>
+
+
+<script>
+    const cvBtn = document.getElementById('cvBtn');
+    function downloadURI(uri, name) {
+        const link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        link.click();
+    }
+
+    cvBtn.addEventListener('click', function () {
+        downloadURI('https://mcwlmebmwa37nl3e.public.blob.vercel-storage.com/Bekjon_Ibragimov-EkHfrMd5UGSJj2emTrvnd79MDCqxrQ.pdf', 'Bekjon_Ibragimov.pdf');
+    });
+
+</script>
 
 <script>
     const m1 = document.getElementById('m1');
