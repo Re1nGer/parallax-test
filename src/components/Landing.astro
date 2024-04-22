@@ -134,6 +134,7 @@ interface Props { }
     gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,MotionPathPlugin);
 
     const timeline = gsap.timeline();
+
     timeline.fromTo("#header", { y: -200 }, {
         y: 0,
         duration: 1,
