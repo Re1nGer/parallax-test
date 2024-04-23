@@ -16,7 +16,7 @@ const Project2 = ({ onClick }) => {
                <ProjectFileRightMobile className={"group-active:stroke-[5px] -translate-x-5 group-active:translate-x-0 transition-transform pt-3 lg:hidden"} />
 
                <ProjectFileLeft className={'group-hover:stroke-[5px] max-w-[431px] max-h-[277px] group-hover:-translate-x-4 transition-all hidden lg:block'} />
-               <ProjectFileRight className={'group-hover:stroke-[5px] max-w-[84px] max-h-[181px] group-hover:translate-x-10 group-active:translate-x-0 transition-transform pt-5 hidden lg:block'} />
+               <ProjectFileRight className={'group-hover:stroke-[5px] max-w-[84px] max-h-[181px] -translate-x-10 group-hover:translate-x-0 transition-transform pt-5 hidden lg:block'} />
            </div>
        </div>
 }
