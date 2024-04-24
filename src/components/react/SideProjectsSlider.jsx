@@ -11,6 +11,9 @@ import { Scrollbar } from "swiper/modules";
 import SideProjectIcons from "./SideProjectIcons.jsx";
 import SideProjectNextBtn from "./SideProjectNextBtn.jsx";
 import SliderBorder from '../../assets/slider_bg_desktop.svg';
+import AlgoExpert1 from '../../assets/img.png';
+import AlgoExpert2 from '../../assets/img_1.png';
+import {Image} from "astro:assets";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -99,11 +102,13 @@ const SideProjectsSlider = () => {
                             src={SwiperBg.src}
                             alt={'swiper bg'}
                         />
+{/*
                         <img
                             className={'absolute h-[852px] z-0'}
                             src={SliderBorder.src}
                             alt={'swiper bg'}
                         />
+*/}
                         <Swiper
                             className={'h-full w-full relative z-40'}
                             spaceBetween={40}
@@ -114,11 +119,11 @@ const SideProjectsSlider = () => {
                         >
                             <SwiperSlide
                                 className={'bg-white max-w-[300px] w-full max-h-[400px] mt-10 rounded-xl'}>
-                                Image 1
+                                <img src={AlgoExpert1.src} className={'object-contain h-full w-full'} alt={'algo'} />
                             </SwiperSlide>
                             <SwiperSlide
                                 className={'bg-white max-w-[300px] w-full max-h-[400px] mt-10 rounded-xl'}>
-                                Image 2
+                                <img src={AlgoExpert2.src} className={'object-contain'} alt={'algo'} />
                             </SwiperSlide>
                         </Swiper>
                     </motion.div>
