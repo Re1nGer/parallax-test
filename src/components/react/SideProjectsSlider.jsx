@@ -92,6 +92,7 @@ const SideProjectsSlider = () => {
                         onClick={() => setIsSliderOpen(false)}
                     />
                 )}
+
                 {isSliderOpen ? (
                     <motion.div
                         exit={{opacity: 0}}
