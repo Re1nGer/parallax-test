@@ -1,19 +1,18 @@
 ---
 import Location from "../../public/location.svg";
+import DesktopNavigationLandingLink from "./react/DesktopNavigationLandingLink";
 import {Image} from "astro:assets";
+
 ---
 <div id="l1" class="absolute md:flex justify-center items-center opacity-0 hidden">
     <Image src={Location} alt="location" />
-    <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:h-[250px] 2xl:hover:h-auto hover:[writing-mode:vertical-lr] 2xl:hover:[writing-mode:horizontal-tb] 2xl:hover:w-[250px] transition-all mb-[1rem] rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
-        1
-        <p class="hidden group-hover:block text-dark_purple font-valorax text-[25px] 2xl:ml-[20px] 2xl:mt-0 mt-[.5rem]">About Me</p>
-    </div>
+    <DesktopNavigationLandingLink num={1} text="About Me" client:load />
 </div>
 <div id="l2" class="absolute md:flex hover:z-10 justify-center items-center opacity-0 hidden">
     <Image src={Location} alt="location" />
     <div class="cursor-pointer h-[50px] group w-[50px] bg-left ml-4 mt-4 top-0 left-0 hover:h-[375px] 2xl:hover:h-auto hover:[writing-mode:vertical-lr] 2xl:hover:[writing-mode:horizontal-tb] 2xl:hover:w-[375px] transition-all rounded-full text-dark_purple absolute text-[35px] flex justify-center items-center bg-white">
         <p>2</p>
-        <p class="hidden group-hover:inline-block text-dark_purple font-valorax text-[25px] 2xl:ml-[20px] 2xl:mt-0 mt-[.5rem]">Work Experience</p>
+        <p class="hidden group-hover:inline-block opacity-0 group-hover:opacity-100 transition-opacity text-dark_purple font-valorax text-[25px] 2xl:ml-[20px] 2xl:mt-0 mt-[.5rem]">Work Experience</p>
     </div>
 </div>
 <div id="l3" class="absolute hidden md:flex justify-center items-center opacity-0">

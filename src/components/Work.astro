@@ -9,17 +9,17 @@ import {Image} from "astro:assets";
 ---
 
 
-<section id="work" class="relative hidden lg:block">
-    <div class="pt-[40px] px-[42px] pb-[60px] flex gap-[46px] justify-center">
-        <h1 class="text-[45px] text-center header-shadow text-dark_blue relative z-10 uppercase mb-[10px] font-valorax">station 2 :</h1>
-        <h1 class="text-[45px] text-center text-black white-text-shadow relative z-10 uppercase mb-[10px] font-valorax">Work Experience</h1>
+<section id="work" class="relative pt-[240px]  hidden lg:block">
+    <div class="px-[42px] pb-[36px] flex gap-[46px] justify-center">
+        <h1 class="text-[80px] text-center header-shadow text-dark_blue relative z-10 uppercase mb-[10px] font-valorax">station 2 :</h1>
+        <h1 class="text-[80px] text-center text-black white-text-shadow relative z-10 uppercase mb-[10px] font-valorax">Work Experience</h1>
     </div>
     <div class="w-full flex justify-center">
         <p class="text-white max-w-[506px] text-[28px] text-shadow text-center relative z-0 flex justify-center">Step into the Corporate Matrix Core, where each project is a guarded secret file on a different security level.</p>
     </div>
 
     <section class="relative px-[35px]  max-w-[1500px] mx-auto">
-        <Image src={Tower} class="max-w-[612px] max-h-[1000px] mt-9" alt="tower" />
+        <Image id="tower" src={Tower} class="max-w-[612px] max-h-[1000px] mt-9" alt="tower" />
         <div class="absolute w-full top-4 right-0 h-full flex flex-col justify-around">
             <Project1Modal client:load />
             <Project2Modal client:load />

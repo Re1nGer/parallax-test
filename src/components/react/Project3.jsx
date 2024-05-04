@@ -1,12 +1,22 @@
 import {ProjectFileLeftMobile, ProjectFileRightMobile} from "./ProjectFileMobile.jsx";
 import {ProjectFileLeft, ProjectFileRight} from "./ProjectFile.jsx";
 import FileArrow from "../../assets/file1.svg";
+import {useEffect} from "react";
+import {gsap} from "gsap/dist/gsap";
 
 const Project3 = ({ onClick }) => {
+
+    useEffect(() => {
+        gsap.to('#project3',
+            { opacity: 1, duration: 1, scrollTrigger: { trigger: '#tower', start: "top top" } });
+        gsap.to('#project3_img',
+            { opacity: 1, duration: 1, scrollTrigger: { trigger: '#tower', start: "top top" } });
+    }, []);
+
     return <div className="flex justify-end w-full" onClick={onClick}>
         <h1 className={'text-dark_blue text-[80px] font-valorax self-end justify-self-end mr-[-8rem] hidden lg:block'}>03</h1>
-        <img src={FileArrow.src} className={'max-w-[359px] max-h-[139px] self-end w-full flex-1 mr-10 hidden lg:block'} alt={'arrow'} />
-        <div className="flex group max-w-[160px] lg:max-w-[420px] lg:max-h-[257px] w-full h-full relative">
+        <img id={"project3_img"} src={FileArrow.src} className={'opacity-0 max-w-[359px] max-h-[139px] self-end w-full flex-1 mr-10 hidden lg:block'} alt={'arrow'} />
+        <div id={"project3"} className="flex group opacity-0 max-w-[160px] lg:max-w-[420px] lg:max-h-[257px] w-full h-full relative">
             <div className="group-active:opacity-0 transition-opacity absolute z-[1] flex flex-col max-w-[100px] lg:max-w-[250px] lg:w-full mt-1 ml-4 h-full justify-center items-center lg:items-center">
                 <h3 className="text-dark_blue text-[15px] lg:text-[42px] uppercase font-valorax">Project</h3>
                 <h3 className="text-dark_blue text-[15px] lg:text-[42px] uppercase text-center font-valorax">#3</h3>

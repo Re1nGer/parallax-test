@@ -1,12 +1,25 @@
-import {ProjectFileLeftMobile, ProjectFileRightMobile} from "./ProjectFileMobile.jsx";
-import {ProjectFileLeft, ProjectFileRight} from "./ProjectFile.jsx";
+import { ProjectFileLeftMobile, ProjectFileRightMobile } from "./ProjectFileMobile.jsx";
+import { ProjectFileLeft, ProjectFileRight } from "./ProjectFile.jsx";
+import { useEffect } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { gsap } from "gsap/dist/gsap";
 import FileArrow from '../../assets/file1.svg';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Project1 = ({ onClick }) => {
+
+    useEffect(() => {
+        gsap.to('#project1',
+            { opacity: 1, duration: 1, scrollTrigger: { trigger: '#tower', start: "top center" } });
+        gsap.to('#project1_img',
+            { opacity: 1, duration: 1, scrollTrigger: { trigger: '#tower', start: "top center" } });
+    }, [])
+
     return <div className="flex justify-end w-full" onClick={onClick}>
         <h1 className={'text-dark_blue text-[80px] font-valorax self-end justify-self-end mr-[-6rem] hidden lg:block'}>01</h1>
-        <img src={FileArrow.src} className={'max-w-[359px] max-h-[139px] self-end w-full flex-1 mr-10 hidden lg:block'} alt={'arrow'} />
-        <div className="flex group max-w-[160px] lg:max-w-[420px] lg:max-h-[257px] w-full h-full relative cursor-pointer">
+        <img id={"project1_img"} src={FileArrow.src} className={'opacity-0 max-w-[359px] max-h-[139px] self-end w-full flex-1 mr-10 hidden lg:block'} alt={'arrow'} />
+        <div id="project1" className="opacity-0 flex group max-w-[160px] lg:max-w-[420px] lg:max-h-[257px] w-full h-full relative z-30 cursor-pointer">
             <div className="group-active:opacity-0 transition-opacity absolute z-[1] flex flex-col max-w-[100px] mt-2 ml-4l lg:max-w-[250px] lg:w-full ml-4 h-full justify-center items-center lg:items-center">
                 <h3 className="text-dark_blue text-[15px] lg:text-[42px] uppercase font-valorax">Project</h3>
                 <h3 className="text-dark_blue text-[15px] lg:text-[42px] font-bold font-valorax">#1</h3>
