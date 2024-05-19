@@ -1,8 +1,8 @@
 import { ProjectFileLeftMobile, ProjectFileRightMobile } from "./ProjectFileMobile.jsx";
 import {ProjectFileLeft, ProjectFileRight} from "./ProjectFile.jsx";
 import FileArrow from "../../assets/file1.svg";
-import {gsap} from "gsap/dist/gsap";
-import {useEffect} from "react";
+import { gsap } from "gsap/dist/gsap";
+import { useEffect } from "react";
 
 const Project2 = ({ onClick }) => {
 

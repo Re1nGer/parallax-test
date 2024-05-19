@@ -16,7 +16,7 @@ const Project1 = ({ onClick }) => {
             { opacity: 1, duration: 1, scrollTrigger: { trigger: '#tower', start: "top center" } });
     }, [])
 
-    return <div className="flex justify-end w-full" onClick={onClick}>
+    return <div className="flex justify-end w-full z-10" onClick={onClick}>
         <h1 className={'text-dark_blue text-[80px] font-valorax self-end justify-self-end mr-[-6rem] hidden lg:block'}>01</h1>
         <img id={"project1_img"} src={FileArrow.src} className={'opacity-0 max-w-[359px] max-h-[139px] self-end w-full flex-1 mr-10 hidden lg:block'} alt={'arrow'} />
         <div id="project1" className="opacity-0 flex group max-w-[160px] lg:max-w-[420px] lg:max-h-[257px] w-full h-full relative z-30 cursor-pointer">
