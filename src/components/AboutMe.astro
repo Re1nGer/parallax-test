@@ -3,10 +3,7 @@ import AboutMeBg from '../../public/aboutme_bg.png'
 import AboutMeBorder from '../../public/about_me_border_desktop.svg';
 import AboutMeStackBorder from '../../public/aboutme_stack_border.svg';
 import { Image } from "astro:assets";
-import NET from './icons/.NET.jsx';
 import GoLang from './icons/GoLang';
-import Jest from './icons/Jest';
-import XUnit from './icons/Xunit';
 import YearsBg from '../../public/years_bg.svg';
 import AchievementsBg from '../../public/achievements_bg.svg';
 import MeBg from '../../public/MeBg.png';
@@ -14,6 +11,14 @@ import AwsBadge from "./react/AwsBadge";
 import CodePair from "./react/CodePair";
 import LeetCodeBadge from "./react/LeetCodeBadge";
 import PullSharkBadge from "./react/PullSharkBadge";
+import React from './icons/React';
+import CSharp from './icons/CSharp';
+import Javascript from './icons/JavaScript';
+import Postgres from './icons/Postgres';
+import Redux from './icons/Redux';
+import Docker from './icons/Docker';
+import Typescript from './icons/TypeScript';
+import NodeJs from './icons/NodeJs';
 ---
 
 
@@ -35,24 +40,24 @@ import PullSharkBadge from "./react/PullSharkBadge";
                     <div class="absolute flex flex-col justify-end gap-[10px] max-w-[300px] w-full z-10">
                         <h1 class="text-light_purple text-[35px] font-valorax self-center">Stack</h1>
                         <div class="flex gap-[10px]">
-                            <NET />
+                            <React />
+                            <CSharp />
+                            <NodeJs />
                             <GoLang />
-                            <Jest />
-                            <XUnit />
-                            <GoLang />
+                            <Postgres />
                         </div>
                         <div class="flex gap-[10px] justify-center">
-                            <NET />
-                            <GoLang />
-                            <Jest />
-                            <XUnit />
+                            <Docker />
+                            <Redux />
+                            <Javascript />
+                            <Typescript />
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col">
                     <div class="h-full w-full relative">
                         <Image src={YearsBg} class="lg:max-w-[243px] lg:max-h-[196px] xl:max-w-[263px] xl:max-h-[206px] h-full w-full" alt="years bg" />
-                        <h1 class="lg:text-[30px] xl:text-[35px] text-dark_purple top-12 left-8 font-valorax absolute">3 years</h1>
+                        <h1 class="lg:text-[30px] xl:text-[35px] text-dark_purple top-12 left-8 font-valorax absolute">4 years</h1>
                         <p class="lg:text-[20px] xl:text-[25px] text-white absolute top-24 left-14">of commercial experience</p>
                     </div>
                     <div class="h-full w-full relative">
