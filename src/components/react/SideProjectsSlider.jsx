@@ -161,7 +161,11 @@ const SideProjectsSlider = () => {
             </div>
             <img id="base" className="mx-auto mt-[-4rem]" src={Base.src} alt="base"/>
 
-            <SideProjectIcons showLive={curIdx !== 0} />
+            <SideProjectIcons
+                showLive={curIdx !== 0}
+                gitLink={curIdx === 0 ? 'https://github.com/Re1nGer/SocialApp' : 'https://github.com/Re1nGer/code_executer_next'}
+                liveLink={'https://code-executer-next.vercel.app/product'}
+            />
 
             <div id={'app_description'} className={'mt-[27px] max-w-[300px] text-white mx-[20px] text-center'}>
                 {curIdx === 0 ? socialAppDescription : algoExpertCloneDescription}
