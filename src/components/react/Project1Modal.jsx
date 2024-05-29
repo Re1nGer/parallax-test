@@ -20,8 +20,14 @@ const Project1Modal = () => {
         <AnimatePresence>
             { isOpen ? (
                 <>
-                    <div className={'absolute h-[800px] lg:h-[2000px] w-full z-10 bg-black bg-opacity-0'} onClick={handleClose}></div>
-                    <div className={'absolute h-[600px] lg:h-[2000px] w-full z-10 bg-black bg-opacity-90'} onClick={handleClose}></div>
+                    <div
+                        className={'absolute h-[800px] lg:h-[2000px] w-full z-10 bg-black bg-opacity-0'}
+                        onClick={handleClose}>
+                    </div>
+                    <div
+                        className={'absolute h-[600px] lg:h-[2000px] w-full z-10 bg-black bg-opacity-90'}
+                        onClick={handleClose}>
+                    </div>
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

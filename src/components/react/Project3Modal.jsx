@@ -9,6 +9,7 @@ import Network from '../../assets/Network.svg';
 import Project3 from "./Project3.jsx";
 import Golang from "../icons/GoLang.jsx";
 import ProjectBorderDesktop from "../../assets/project_border_desktop.svg";
+import Postgres from "../icons/Postgres.jsx";
 
 const Project3Modal = () => {
 
@@ -38,13 +39,9 @@ const Project3Modal = () => {
                                 <h1 className={'text-dark_blue text-[25px] font-valorax blue-text-shadow lg:text-[35px] lg:mt-8'}>stack:</h1>
                             </div>
                             <div className={'flex w-full justify-start flex-col lg:flex-row lg:justify-center gap-[12.5px] relative z-10'}>
-                                <div className={'flex justify-center w-full lg:justify-end gap-[12.5px]'}>
+                                <div className={'flex justify-center w-full lg:justify-center gap-[12.5px]'}>
                                     <Golang />
-                                    <ReactIcon />
-                                </div>
-                                <div className={'flex justify-center w-full lg:justify-start gap-[12.5px]'}>
-                                    <XUnitIcon />
-                                    <JestIcon />
+                                    <Postgres />
                                 </div>
                             </div>
                             <div className={'flex gap-[.5rem] lg:gap-[16px] max-w-[250px] lg:max-w-[475px] mt-[30px]'}>

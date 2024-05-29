@@ -61,6 +61,9 @@ import NodeJs from './icons/NodeJs';
                         <p class="lg:text-[20px] xl:text-[25px] text-white absolute top-24 left-14">of commercial experience</p>
                     </div>
                     <div class="h-full w-full relative">
+<!--
+                        <div class="tooltip absolute top-[-8rem] right-[-2rem] z-30">This is a Tooltip with a gradient or solid coloration and with border radius </div>
+-->
                         <Image src={AchievementsBg} class="lg:max-w-[243px] lg:max-h-[274px] xl:max-w-[263px] xl:max-h-[328px] w-full h-full" alt="achievements bg" />
                         <h1 class="lg:text-[19px] xl:text-[21px] text-light_purple absolute font-valorax top-12 left-7">achievements</h1>
                         <div class="flex flex-col gap-[17px] absolute top-24 left-10">
@@ -84,4 +87,28 @@ import NodeJs from './icons/NodeJs';
 <!--
 add damn shadows
 -->
-<style></style>
+
+<style>
+    /* HTML: <div class="tooltip">This is a Tooltip with a gradient or solid coloration and with border radius </div> */
+    .tooltip {
+        color: #fff;
+        font-size: 18px;
+        max-width: 24ch;
+        text-align: center;
+    }
+    .tooltip {
+        --s: 1.5em; /* triangle size */
+        --r: 1em; /* the radius */
+
+        padding: 1em;
+        border: var(--s) solid #0000;
+        border-radius: calc(var(--r) + var(--s));
+        border-bottom-left-radius: 0;
+        background: border-box linear-gradient(60deg,gray, black); /* the coloration */
+        -webkit-mask:
+                radial-gradient(100% 100% at 100% 100%,#0000 99%,#000 102%)
+                var(--s) 100%/var(--s) var(--s) no-repeat border-box,
+                linear-gradient(#000 0 0) padding-box;
+    }
+
+</style>

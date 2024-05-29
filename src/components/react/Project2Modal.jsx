@@ -3,12 +3,14 @@ import {AnimatePresence, motion} from "framer-motion";
 import ProjectBorder from "../../assets/project_border.svg";
 import NetIcon from '../icons/.NET.jsx';
 import JestIcon from '../icons/Jest.jsx';
-import XUnitIcon from '../icons/Xunit.jsx';
 import ReactIcon from '../icons/React.jsx';
+
 import Network from '../../assets/Network.svg';
 
 import Project2 from "./Project2.jsx";
 import ProjectBorderDesktop from "../../assets/project_border_desktop.svg";
+import Postgres from "../icons/Postgres.jsx";
+import Docker from "../icons/Docker.jsx";
 
 const Project2Modal = () => {
 
@@ -42,8 +44,8 @@ const Project2Modal = () => {
                                     <ReactIcon />
                                 </div>
                                 <div className={'flex justify-center w-full lg:justify-start gap-[12.5px]'}>
-                                    <XUnitIcon />
-                                    <JestIcon />
+                                    <Postgres />
+                                    <Docker />
                                 </div>
                             </div>
                             <div className={'flex gap-[.5rem] lg:gap-[16px] max-w-[250px] lg:max-w-[475px] mt-[30px]'}>
