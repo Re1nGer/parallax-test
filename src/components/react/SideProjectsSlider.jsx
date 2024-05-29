@@ -161,11 +161,12 @@ const SideProjectsSlider = () => {
             </div>
             <img id="base" className="mx-auto mt-[-4rem]" src={Base.src} alt="base"/>
 
-            <SideProjectIcons />
+            <SideProjectIcons showLive={curIdx !== 0} />
 
             <div id={'app_description'} className={'mt-[27px] max-w-[300px] text-white mx-[20px] text-center'}>
                 {curIdx === 0 ? socialAppDescription : algoExpertCloneDescription}
             </div>
+
             <SideProjectNextBtn
                 onClick={curIdx === 0 ? next : prev}
                 curIdx={curIdx}
